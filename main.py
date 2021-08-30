@@ -36,6 +36,10 @@ def stub():
 def sus():
     return render_template("sus.html")
 
+@app.route('/Ethan/')
+def stub2():
+    return render_template("stub2.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,)
