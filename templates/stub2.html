@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
 
-</body>
-</html>
+<!- This variable sets name of browser tab  -->
+{% set project = "Ethan Greeting" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <p>Ethan Greeting</p>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
