@@ -40,6 +40,11 @@ def sus():
 def stub2():
     return render_template("stub2.html")
 
+@app.route('/Jason/')
+def Jason():
+    return render_template("Jason.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,)
