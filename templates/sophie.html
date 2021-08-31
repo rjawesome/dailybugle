@@ -1,0 +1,17 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Sophie, aka CalrethilOfMirkwood" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <title>Sophie</title>
+    <img src="/images/bruhtastic.jpg" alt="hi i am sophie and here you see me on a bike">
+    <img src="/images/coolerest.jpg" alt="my passport photo stares into your soul">
+    <comment>what does this do?</comment>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
