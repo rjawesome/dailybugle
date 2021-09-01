@@ -46,7 +46,7 @@ def Jason():
 @app.route('/Sophie')
 def sussy():
     return render_template("sophie.html")
-
+# Jason greeting project code
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
