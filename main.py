@@ -41,7 +41,7 @@ def stub2():
     return render_template("stub2.html")
 
 @app.route('/Jason/')
-def Jason():
+def jason():
     return render_template("Jason.html")
 
 @app.route('/Sophie')
