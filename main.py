@@ -43,7 +43,7 @@ def stub2():
 @app.route('/Jason/')
 def Jason():
     return render_template("Jason.html")
-@app.route('/sus')
+@app.route('/Sophie')
 def sussy():
     return render_template("sophie.html")
 
