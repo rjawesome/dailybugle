@@ -49,7 +49,7 @@ def sussy():
     return render_template("sophie.html")
 
 @app.route('/Punnu/')
-def Punnu():
+def punnu():
     return render_template("punnu.html")
 
 @app.route('/greet', methods=['GET', 'POST'])
