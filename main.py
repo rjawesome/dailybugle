@@ -1,5 +1,5 @@
 # import "packages" from flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 # create a Flask instance
 app = Flask(__name__)
@@ -43,14 +43,9 @@ def stub2():
 @app.route('/Jason/')
 def Jason():
     return render_template("Jason.html")
-
 @app.route('/Sophie')
 def sussy():
     return render_template("sophie.html")
-
-@app.route('/Punnu/')
-def punnu():
-    return render_template("punnu.html")
 
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
@@ -58,9 +53,9 @@ def greet():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("greet.html", name=name)
+            return render_template("Jason.html", name=name)
     # starting and empty input default
-    return render_template("greet.html", name="World")
+    return render_template("Jason.html", name="World")
 
 
 # runs the application on the development server
