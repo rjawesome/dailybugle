@@ -6,10 +6,17 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-<!- Try building a new body here ->
-<p>Hello my name is Jason</p>
+<div class="col-3">
+    <a href="{{ Jour }}" class="btn">Journal</a>
+</div>
+<!-- Setting up variables to customize "project" details to be specific to Jason -->
+{% set Jour = "https://docs.google.com/document/d/1_07UqztsMrCB-25jyAmEY0PtHlpxz_5iJnr5U1ZaHe8/edit" %}
+
+<p>Tech Talk 1 - Body Stub</p>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
 {% block background %}
 {% endblock %}
+
+
