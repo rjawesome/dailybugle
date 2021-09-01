@@ -32,7 +32,7 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
-@app.route('/sus')
+@app.route('/🥵🥵🔥SUS🥵🥵🔥')
 def sus():
     return render_template("sus.html")
 
@@ -43,6 +43,9 @@ def stub2():
 @app.route('/Jason/')
 def Jason():
     return render_template("Jason.html")
+@app.route('/sus')
+def sussy():
+    return render_template("sophie.html")
 
 
 # runs the application on the development server
