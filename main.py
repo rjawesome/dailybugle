@@ -43,9 +43,14 @@ def stub2():
 @app.route('/Jason/')
 def Jason():
     return render_template("Jason.html")
+
 @app.route('/Sophie')
 def sussy():
     return render_template("sophie.html")
+
+@app.route('/Punnu/')
+def Punnu():
+    return render_template("punnu.html")
 
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
