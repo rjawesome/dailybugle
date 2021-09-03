@@ -1,7 +1,19 @@
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
+### The People
+####| Name | Github Profile |
+####| - | - |
+####| Sophie Park | [@Michaelc179](https://github.com/CalrethilOfMirkwood) |
+####| Punarvasu Sangam | [@PunarvasuS](https://github.com/PunarvasuS) |
+####| Ethan Guo | [@FierceExplorer](https://github.com/Anirudh123nasty) |
+| Jason Kaplan | [@strangiato2112](https://github.com/JL1080) |
 ### Idea
 Starter code should be fun and practical.
+###Theme Idea
+#### We want to make a newspaper based in the fictional Marvel Universe.
+#### It will be based on real-life news and fictional news like the Xenonion.
+#### We will each write several brief articles for different sections.  We are currently planning on Global News, Buisness+Finance, Opinion, and Entertainment.
+
 ### Visual thoughts
 #### Organize with Bootstrap menu 
 #### Add some color and fun through VANTA Visuals (birds, halo, solar, net)
