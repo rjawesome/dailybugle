@@ -6,28 +6,32 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-    <div class="col-12">
-        <p>Hello, {{name}}!</p>
+    <style>
+        html, body, p{
+            background-color: darkred;
+            color: black;
+        }
+        p{
+            font-family: "Comic Sans MS"
+        }
+    </style>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>Hello, {{name}}!</p>
+        </div>
+        <div class="col-12">
+            <form action="/Jason/hello" id="hello" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Greetings!">
+            </form>
+        </div>
     </div>
-    <div class="col-12">
-        <form action="/Jason/hello" id="hello" method="POST" >
-            <label for="name">Type a greeting name?</label>
-            <input name="name" id="name">
-            <input type="submit" value="Greetings!">
-        </form>
-    </div>
-    <div class="col-12">
-        <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
-    </div>
-</div>
 
 
-<p> This is my AP CSP Journal link</p>
-<a href="https://docs.google.com/document/d/1_07UqztsMrCB-25jyAmEY0PtHlpxz_5iJnr5U1ZaHe8/edit" target="_blank">Journal</a>
-
-<p></p>
+    <p> This is my AP CSP Journal link</p>
+    <a href="https://docs.google.com/document/d/1_07UqztsMrCB-25jyAmEY0PtHlpxz_5iJnr5U1ZaHe8/edit" target="_blank">Journal</a>
+    <iframe src="https://www.youtube.com/embed/5PCWUCv1rnU"></iframe>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->

@@ -2,11 +2,18 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "Sophie, aka CalrethilOfMirkwood" %}
+{% set project = "THINKPINKTHINKPINKTHINKPINKTHINKPINK" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <title>Sophie</title>
+    <title>PINKALICIOUS</title>
+    <style>
+        html, body, p{
+            background-color: lightpink;
+            color: deeppink;
+            font-family: "Comic Sans MS";
+        }
+    </style>
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <div class="col-12">
             <p>Hello, {{name}}!</p>
@@ -18,13 +25,10 @@
                 <input type="submit" value="Greetings!">
             </form>
         </div>
-        <div class="col-12">
-            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
-        </div>
-        <a href="https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing" target="_blank"> My CS P Journal</a>
-        <img src="/static/assets/bruhtastic.jpg" alt="hi i am sophie and here you see me on a bike">
-        <img src="/static/assets/coolerest.jpg" alt="my passport photo stares into your soul">
-        <h1>hello world!</h1>
+        <a href="https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing" target="_blank"> My CS P Journal</a><br>
+        <img width=300  src="/static/assets/bruhtastic.jpg" alt="hi i am sophie and here you see me on a bike">
+        <img width=300 src="/static/assets/coolerest.jpg" alt="my passport photo stares into your soul">
+        <h1>!think pink!</h1>
     </div>
 {% endblock %}
 
