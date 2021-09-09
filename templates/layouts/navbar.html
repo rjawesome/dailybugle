@@ -1,6 +1,7 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,12 +11,27 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Authors
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/Jason">Jason</a>
+                    <a class="dropdown-item" href="/Ethan">Ethan</a>
+                    <a class="dropdown-item" href="/Sophie">Sophie</a>
+                    <a class="dropdown-item" href="/Punnu">Punnu</a>
+                </div>
+            </li>
+
+
             <a class="nav-link" href={{ url_for('kangaroos') }}>About us</a>
             <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
             <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
             <a class="nav-link" href={{ url_for('sus') }}>MiniProject-Page</a>
             <!-- stub is shown using the name of the route -->
             <a class="nav-link" href="stub">Stub</a>
+
+
 
             <!-- <li class="nav-item dropdown navbar-text">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Individual Labs </a>
@@ -28,5 +44,54 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             </li> -->
 
         </div>
+
+        </li> -->
     </div>
 </nav>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark">-->
+<!--    &lt;!&ndash; Brand &ndash;&gt;-->
+<!--    <a class="navbar-brand" href="#">Logo</a>-->
+
+<!--    &lt;!&ndash; Links &ndash;&gt;-->
+<!--    <ul class="navbar-nav">-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="#">Link 1</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="#">Link 2</a>-->
+<!--        </li>-->
+
+        <!-- Dropdown -->
+<!--        <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">-->
+<!--                Dropdown link-->
+<!--            </a>-->
+<!--            <div class="dropdown-menu">-->
+<!--                <a class="dropdown-item" href="/Jason">Jason</a>-->
+<!--                <a class="dropdown-item" href="#">Link 2</a>-->
+<!--                <a class="dropdown-item" href="#">Link 3</a>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</nav>-->
+<!--<br>-->
+
+<div class="container">
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
