@@ -7,24 +7,21 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 <!- Try building a new body here ->
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-    <div class="col-12">
-        <p>Hello, {{name}}!</p>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>Hello, {{name}}!</p>
+        </div>
+        <div class="col-12">
+            <form action="/Punnu/hi" id="greet" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Greetings!">
+            </form>
+        </div>
     </div>
-    <div class="col-12">
-        <form action="/Punnu/hi" id="greet" method="POST" >
-            <label for="name">Type a greeting name?</label>
-            <input name="name" id="name">
-            <input type="submit" value="Greetings!">
-        </form>
-    </div>
-    <div class="col-12">
-        <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
-    </div>
-</div>
-<p>Punnu Greeting</p>
+    <p>Punnu Greeting</p>
 
-<a href="https://docs.google.com/document/d/1fD9aVooS0dbOJZCmh1KXjiAS6M9TM4oYgXOhvFVISPk/edit?usp=sharing" target="_blank"> My CS P Journal</a>
+    <a href="https://docs.google.com/document/d/1fD9aVooS0dbOJZCmh1KXjiAS6M9TM4oYgXOhvFVISPk/edit?usp=sharing" target="_blank"> My CS P Journal</a>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
