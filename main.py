@@ -46,6 +46,10 @@ def sussy():
 def punnu():
     return render_template("punnu.html")
 
+@app.route('/💡💡💡')
+def binary():
+    return render_template("binary.html")
+
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])
 def greet():
@@ -77,7 +81,7 @@ def hi():
     # starting and empty input default
     return render_template("punnu.html", name="World")
 
-@app.route('/Sophie/hello', methods=['GET', 'POST'])
+@app.route('/Sophie/sussusamogus', methods=['GET', 'POST'])
 def hey():
     # submit button has been pushed
     if request.form:
