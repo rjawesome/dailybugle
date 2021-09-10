@@ -22,12 +22,20 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </div>
             </li>
 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Mini Projects
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/Videop">Video Project</a>
+                    <a class="dropdown-item" href="/🥵🥵🔥SUS🥵🥵🔥">Greeting</a>
+                    <a class="dropdown-item" href="/💡💡💡">Binary Project</a>
+                </div>
+            </li>
 
-            <a class="nav-link" href={{ url_for('kangaroos') }}>About us</a>
+
             <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
             <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
-            <a class="nav-link" href={{ url_for('sus') }}>MiniProject-Page</a>
-            <a class="nav-link" href={{ url_for('binary') }}>Binary</a>
             <!-- stub is shown using the name of the route -->
             <a class="nav-link" href="stub">Stub</a>
 

@@ -38,6 +38,10 @@ def stub2():
 def jason():
     return render_template("Jason.html")
 
+@app.route('/Videop/')
+def video():
+    return render_template("VideoP.html")
+
 @app.route('/Sophie/')
 def sussy():
     return render_template("sophie.html")
