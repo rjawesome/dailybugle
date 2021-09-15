@@ -8,13 +8,26 @@
 {% block body %}
     <title>PINKALICIOUS</title>
     <style>
-        html, body, p{
-            background-color: lightpink;
-            color: deeppink;
+        html, body {
+            background-color: lightblue;
+            color: darkblue;
             font-family: "Comic Sans MS";
         }
+        a {
+            font-size: medium;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        .range{
+            position: fixed;
+            bottom:0;
+            width: 100%;
+        }
     </style>
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <body>
+    <div class="center-block">
         <div class="col-12">
             <p>Hello, {{name}}!</p>
         </div>
@@ -24,12 +37,14 @@
                 <input name="name" id="name">
                 <input type="submit" value="Greetings!">
             </form>
+            <img width=40% src="/static/assets/bruhtastic.jpg" alt="hi i am sophie and here you see me on a bike">
+            <img width=40% src="/static/assets/coolerest.jpg" alt="my passport photo stares into your soul">
         </div>
-        <a href="https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing" target="_blank"> My CS P Journal</a><br>
-        <img width=300  src="/static/assets/bruhtastic.jpg" alt="hi i am sophie and here you see me on a bike">
-        <img width=300 src="/static/assets/coolerest.jpg" alt="my passport photo stares into your soul">
-        <h1>!think pink!</h1>
     </div>
+    <a href="https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing" target="_blank"> My CS P Journal</a><br>
+    <h1>!think pink!</h1>
+    <img class="range" src="/static/assets/range.png"/>
+    </body>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->

@@ -43,9 +43,10 @@
          DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
          below ASCII for more ideas of where to make changes
          */
+        document.getElementById('ascii').innerHTML = String.fromCharCode(binary, 2);
     }
 
-    // algorithm to convert decimal to base using division and remainder
+    // algorithm to convert decimal, ) to base using division and remainder
     function decimal_2_base(decimal, base) {
         let conversion = "";
         // loop to convert to base
