@@ -26,20 +26,10 @@
 
 
 <!- Below is the Bootstrap code for a grid -->
-<div class="row">
-    <div class="col-sm-3">.col-sm-3</div>
-    <div class="col-sm-3">.col-sm-3</div>
-    <div class="col-sm-3">.col-sm-3</div>
-    <div class="col-sm-3">.col-sm-3</div>
-</div>
-<div class="row">
-    <div class="col-sm-3">hello</div>
-    <div class="col-sm-4">hello</div>
+
 
 </div>
 <div class="container">
-    <h2>Bordered Table</h2>
-    <p>The .table-bordered class adds borders on all sides of the table and the cells:</p>
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -47,7 +37,6 @@
             <th>Lastname</th>
             <th>Email</th>
         </tr>
-        </thead>
         <tbody>
         <tr>
             <td>John</td>
@@ -70,6 +59,32 @@
 
 </body>
 </html>
+<hr>
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+<p id="demo2" onclick="myFunction2()">Hello World</p>
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello World";
+    }
+</script>
+
+<script>
+    function myFunction2() {
+        document.getElementById("demo2").innerHTML = "YOU CLICKED ME!";
+    }
+</script>
+<img src="/static/assets/Xbox Scrapbook.jpg" id="myImg" height="200" width="200" alt="Xbox Scrapbook">
+<input type="button" onclick="changeImg()" value="Change" />
+<script>
+    function changeImg() {
+        document.getElementById("myImg").src = "/static/assets/Warden Kill.gif"
+    }
+</script>
+
+
+
 {% endblock %}
 <!- This is turning off birds background from base.html -->
 {% block background %}
