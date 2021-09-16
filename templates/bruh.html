@@ -100,13 +100,13 @@
                 const image = document.getElementById('bulb' + i);
                 const butt = document.getElementById('butt' + i);
                 // Change digit and visual
-                if (image.src.match("/static/assets/avengers.gif")) {
+                if (image.src.match("/static/assets/hydra.png")) {
                     dig.value = 0;
-                    image.src = "/static/assets/hydra.png";
+                    image.src = "/static/assets/shield.png";
                     butt.innerHTML = "Turn On";
                 } else {
                     dig.value = 1;
-                    image.src = "/static/assets/avengers.gif";
+                    image.src = "/static/assets/hydra.png";
                     butt.innerHTML = "Turn Off";
                 }
                 // Binary numbers
@@ -132,10 +132,10 @@
                     let digit = binary.substr(i, 1);
                     document.getElementById('digit' + i).value = digit;
                     if (digit === "1") {
-                        document.getElementById('bulb' + i).src = "/static/assets/avengers.png";
+                        document.getElementById('bulb' + i).src = "/static/assets/hydra.png";
                         document.getElementById('butt' + i).innerHTML = "Turn Off";
                     } else {
-                        document.getElementById('bulb' + i).src = "/static/assets/hydra.png";
+                        document.getElementById('bulb' + i).src = "/static/assets/shield.png";
                         document.getElementById('butt' + i).innerHTML = "Turn On";
                     }
                 }
@@ -209,35 +209,35 @@
                 <table class="table">
                     <tr>
 
-                        <td><img class="img-responsive py-3" id="bulb0" src="/static/assets/hydra.png" alt="" width="40" height="Auto">
+                        <td><img class="img-responsive py-3" id="bulb0" src="/static/assets/shield.png" alt="" width="40" height="Auto">
                             <button type="button" id="butt0" onclick="toggleBit('0')">Turn On</button>
                         </td>
 
-                        <td><img class="img-responsive py-3" id="bulb1" src="/static/assets/hydra.png" alt="" width="40" height="Auto">
+                        <td><img class="img-responsive py-3" id="bulb1" src="/static/assets/shield.png" alt="" width="40" height="Auto">
                             <button type="button" id="butt1" onclick="toggleBit('1')">Turn On</button>
                         </td>
 
-                        <td><img class="img-responsive py-3" id="bulb2" src="/static/assets/hydra.png" alt="" width="40" height="Auto">
+                        <td><img class="img-responsive py-3" id="bulb2" src="/static/assets/shield.png" alt="" width="40" height="Auto">
                             <button type="button" id="butt2" onclick="toggleBit('2')">Turn On</button>
                         </td>
 
-                        <td><img class="img-responsive py-3" id="bulb3" src="/static/assets/hydra.png" alt="" width="40" height="Auto">
+                        <td><img class="img-responsive py-3" id="bulb3" src="/static/assets/shield.png" alt="" width="40" height="Auto">
                             <button type="button" id="butt3" onclick="toggleBit('3')">Turn On</button>
                         </td>
 
-                        <td><img class="img-responsive py-3" id="bulb4" src="/static/assets/hydra.png" alt="" width="40" height="Auto">
+                        <td><img class="img-responsive py-3" id="bulb4" src="/static/assets/shield.png" alt="" width="40" height="Auto">
                             <button type="button" id="butt4" onclick="toggleBit('4')">Turn On</button>
                         </td>
 
-                        <td><img class="img-responsive py-3" id="bulb5" src="/static/assets/hydra.png" alt="" width="40" height="Auto">
+                        <td><img class="img-responsive py-3" id="bulb5" src="/static/assets/shield.png" alt="" width="40" height="Auto">
                             <button type="button" id="butt5" onclick="toggleBit('5')">Turn On</button>
                         </td>
 
-                        <td><img class="img-responsive py-3" id="bulb6" src="/static/assets/hydra.png" alt="" width="40" height="Auto">
+                        <td><img class="img-responsive py-3" id="bulb6" src="/static/assets/shield.png" alt="" width="40" height="Auto">
                             <button type="button" id="butt6" onclick="toggleBit('6')">Turn On</button>
                         </td>
 
-                        <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/hydra.png" alt="" width="40" height="Auto">
+                        <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/shield.png" alt="" width="40" height="Auto">
                             <button type="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
                         </td>
 
