@@ -2,16 +2,16 @@
 {% extends "layouts/base.html" %}
 
 <!- This variable sets name of browser tab  -->
-{% set project = "THINKPINKTHINKPINKTHINKPINKTHINKPINK" %}
+{% set project = "" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <title>PINKALICIOUS</title>
+    <title>CalrethilOfMirkwood</title>
     <style>
         html, body {
             background-color: lightblue;
             color: darkblue;
-            font-family: "Comic Sans MS";
+            font-family: "BatangChe";
         }
         a {
             font-size: medium;
@@ -23,7 +23,12 @@
         .range{
             position: fixed;
             bottom:0;
+            left:0;
             width: 100%;
+        }
+        .journal{
+            font-size: medium;
+            text-align: center;
         }
     </style>
     <body>
@@ -37,12 +42,13 @@
                 <input name="name" id="name">
                 <input type="submit" value="Greetings!">
             </form>
-            <img width=40% src="/static/assets/bruhtastic.jpg" alt="hi i am sophie and here you see me on a bike">
+            <img width=40% src="/static/assets/bruhtastic.jpg" alt="me on a bike">
             <img width=40% src="/static/assets/coolerest.jpg" alt="my passport photo stares into your soul">
         </div>
     </div>
-    <a href="https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing" target="_blank"> My CS P Journal</a><br>
-    <h1>!think pink!</h1>
+    <br><br>
+    <a class="journal" href="https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing" target="_blank"> Link to My CSP Journal</a><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
     <img class="range" src="/static/assets/range.png"/>
     </body>
 {% endblock %}

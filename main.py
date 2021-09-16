@@ -54,6 +54,10 @@ def punnu():
 def binary():
     return render_template("binary.html")
 
+@app.route('/bruh')
+def bruh():
+    return render_template("bruh.html")
+
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])
 def greet():
