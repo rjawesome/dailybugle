@@ -13,8 +13,8 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
  Name | Github Profile 
 | :---- | :---- |
-| Sophie Soyeon Park | [@CalrethilOfMirkwood](https://github.com/CalrethilOfMirkwood) |[Sophie Park Journal](https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing)
-| Punarvasu Sangam | [@PunarvasuS](https://github.com/PunarvasuS) |[Punarvasu Sangam Journal] (https://docs.google.com/document/d/1fD9aVooS0dbOJZCmh1KXjiAS6M9TM4oYgXOhvFVISPk/edit?usp=sharing)
+| Sophie Soyeon Park | [@CalrethilOfMirkwood](https://github.com/CalrethilOfMirkwood) | [Sophie Park Journal](https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing) 
+| Punarvasu Sangam | [@PunarvasuS](https://github.com/PunarvasuS) | [Punarvasu Sangam Journal](https://docs.google.com/document/d/1fD9aVooS0dbOJZCmh1KXjiAS6M9TM4oYgXOhvFVISPk/edit?usp=sharing) 
 | Ethan Guo | [@FierceExplorer](https://github.com/Anirudh123nasty) |[Ethan Guo Journal](https://docs.google.com/document/d/11vsWPaCuoXcu6-stnnRsQocQagZt6etMUKN_my-wCZQ/edit)
 | Jason Kaplan | [@strangiato2112](https://github.com/JL1080) |[Jason Kaplan](https://docs.google.com/document/d/1_07UqztsMrCB-25jyAmEY0PtHlpxz_5iJnr5U1ZaHe8/edit)
 ## Theme Idea
