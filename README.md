@@ -7,9 +7,11 @@
 <!--te-->
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ## The People
+
 - [Team Scrum Board](https://github.com/CalrethilOfMirkwood/flask_portfolio/projects/1)
 - [Team Insight Graphs](https://github.com/CalrethilOfMirkwood/flask_portfolio/graphs/contributors)
-| Name | Github Profile |
+
+ Name | Github Profile 
 | :---- | :---- |
 | Sophie Soyeon Park | [@CalrethilOfMirkwood](https://github.com/CalrethilOfMirkwood) |[Sophie Park Journal](https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing)
 | Punarvasu Sangam | [@PunarvasuS](https://github.com/PunarvasuS) |[Punarvasu Sangam Journal] (https://docs.google.com/document/d/1fD9aVooS0dbOJZCmh1KXjiAS6M9TM4oYgXOhvFVISPk/edit?usp=sharing)
