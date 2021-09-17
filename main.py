@@ -58,6 +58,10 @@ def binary():
 def bruh():
     return render_template("bruh.html")
 
+@app.route('/articles')
+def articles():
+    return render_template("article.html")
+
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])
 def greet():
