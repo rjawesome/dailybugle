@@ -11,16 +11,16 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 - [Team Scrum Board](https://github.com/CalrethilOfMirkwood/flask_portfolio/projects/1)
 - [Team Insight Graphs](https://github.com/CalrethilOfMirkwood/flask_portfolio/graphs/contributors)
 
- Name | Github Profile 
-| :---- | :---- |
+ Name | Github Profile | Journal Links
+| :---- | :---- | :---- |
 | Sophie Soyeon Park | [@CalrethilOfMirkwood](https://github.com/CalrethilOfMirkwood) | [Sophie Park Journal](https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit?usp=sharing) 
 | Punarvasu Sangam | [@PunarvasuS](https://github.com/PunarvasuS) | [Punarvasu Sangam Journal](https://docs.google.com/document/d/1fD9aVooS0dbOJZCmh1KXjiAS6M9TM4oYgXOhvFVISPk/edit?usp=sharing) 
 | Ethan Guo | [@FierceExplorer](https://github.com/Anirudh123nasty) | [Ethan Guo Journal](https://docs.google.com/document/d/11vsWPaCuoXcu6-stnnRsQocQagZt6etMUKN_my-wCZQ/edit)
-| Jason Kaplan | [@strangiato2112](https://github.com/JL1080) | [Jason Kaplan](https://docs.google.com/document/d/1_07UqztsMrCB-25jyAmEY0PtHlpxz_5iJnr5U1ZaHe8/edit)
+| Jason Kaplan | [@strangiato2112](https://github.com/JL1080) | [Jason Kaplan Journal](https://docs.google.com/document/d/1_07UqztsMrCB-25jyAmEY0PtHlpxz_5iJnr5U1ZaHe8/edit)
 
 
 ## Theme Idea
-#### We want to make a newspaper based in the fictional Marvel Universe.
+#### We want to make a newspaper based in the fictional Marvel Universe
 #### It will be based on real-life news and fictional news like the Xenonion.  We will each write several brief articles for different sections.  We are currently planning on Global News, Buisness+Finance, Opinion, and Entertainment.
 #### We will likely need:
 ##### 1. To write several ~1-paragraph long articles
@@ -32,3 +32,6 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 ### Week 3+4
 #### So far we have decided on our theme and have been focusing on learning computer science skills and preparing our website+development skills in preparation for the larger project.
 #### We have created a [mini-project page](https://github.com/CalrethilOfMirkwood/flask_portfolio/blob/main/templates/sus.html), [a dropdown menu for the about us pages](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/5), [customized about us pages](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/7), [and made a custom readme](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/4).
+Requirements | Evidence | 
+| :---- | :---- |
+| Binary Project | Almost done. Almost all HACK objectives have been completed. New Buttons have been added. Input area has not been completed.![image](https://user-images.githubusercontent.com/89167174/133858370-fe9d1ca5-b19c-45e5-aba8-2254d6121292.png) |
