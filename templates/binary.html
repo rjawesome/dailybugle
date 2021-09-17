@@ -1,6 +1,5 @@
 <!-- Extending the predefined project layout -->
 {% include "layouts/navbar.html" %}
-{% set basename = "The Daily 🎺 Bugle" %}
 {% block body %}
 <head>
     <!-- Required meta tags -->
@@ -49,7 +48,7 @@
 
     <!-- Use this block for page specific meta data -->
 
-    <title>Binary page</title>
+    <title>Binary Page</title>
     <script>
         const BITS = '8'; let max = '255'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
@@ -101,13 +100,13 @@
             const image = document.getElementById('bulb' + i);
             const butt = document.getElementById('butt' + i);
             // Change digit and visual
-            if (image.src.match("/static/assets/bulb_off.png")) {
+            if (image.src.match("/static/assets/bulb_on.png")) {
                 dig.value = 0;
-                image.src = "/static/assets/bulb_on.png";
+                image.src = "/static/assets/bulb_off.png";
                 butt.innerHTML = "Turn On";
             } else {
                 dig.value = 1;
-                image.src = "/static/assets/bulb_off.png";
+                image.src = "/static/assets/bulb_on.png";
                 butt.innerHTML = "Turn Off";
             }
             // Binary numbers
@@ -148,7 +147,7 @@
 </head>
 
 
-<body>
+<body style="font-family: gilroyLIGHT,serif; color: grey;" >
 
 <!-- Clock display -->
 <div class="px-3">
@@ -195,14 +194,14 @@
                     <th>Minus</th>
                 </tr>
                 <tr>
-                    <td><button class="button" id="add1" onclick="add(1)">+1</button></td>
+                    <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                     <td id="binary">00000000</td>
                     <td id="octal">0</td>
                     <td id="hexadecimal">0</td>
                     <td id="decimal">0</td>
                     <td id="ASCII">0</td>
                     <!-- Hack: display printable character(s)  -->
-                    <td><button class="button" id="sub1" onclick="add(-1)">-1</button></td>
+                    <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                 </tr>
             </table>
         </div>
@@ -211,36 +210,36 @@
             <table class="table">
                 <tr>
 
-                    <td><img class="img-responsive py-3" id="bulb0" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt0" onclick="toggleBit('0')">Turn On</button>
+                    <td><img class="img-responsive py-3" id="bulb0" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt0" onclick="toggleBit('0')">Turn On</button>
                     </td>
 
-                    <td><img class="img-responsive py-3" id="bulb1" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt1" onclick="toggleBit('1')">Turn On</button>
+                    <td><img class="img-responsive py-3" id="bulb1" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt1" onclick="toggleBit('1')">Turn On</button>
                     </td>
 
-                    <td><img class="img-responsive py-3" id="bulb2" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt2" onclick="toggleBit('2')">Turn On</button>
+                    <td><img class="img-responsive py-3" id="bulb2" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt2" onclick="toggleBit('2')">Turn On</button>
                     </td>
 
-                    <td><img class="img-responsive py-3" id="bulb3" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt3" onclick="toggleBit('3')">Turn On</button>
+                    <td><img class="img-responsive py-3" id="bulb3" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt3" onclick="toggleBit('3')">Turn On</button>
                     </td>
 
-                    <td><img class="img-responsive py-3" id="bulb4" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt4" onclick="toggleBit('4')">Turn On</button>
+                    <td><img class="img-responsive py-3" id="bulb4" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt4" onclick="toggleBit('4')">Turn On</button>
                     </td>
 
-                    <td><img class="img-responsive py-3" id="bulb5" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt5" onclick="toggleBit('5')">Turn On</button>
+                    <td><img class="img-responsive py-3" id="bulb5" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt5" onclick="toggleBit('5')">Turn On</button>
                     </td>
 
-                    <td><img class="img-responsive py-3" id="bulb6" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt6" onclick="toggleBit('6')">Turn On</button>
+                    <td><img class="img-responsive py-3" id="bulb6" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt6" onclick="toggleBit('6')">Turn On</button>
                     </td>
 
-                    <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
+                    <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
                     </td>
 
                 </tr>
@@ -264,12 +263,23 @@
 
                 </tr>
             </table>
-        </div>
-        </div>
-    </div>
+        </div><button type="button" id="add1" onclick="add(1)">+1</button>
+        <div class="col-8">
 
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="contact" style="height: 35vh;">
 
     <div class="row justify-content-center" style="margin-top: 2%;">
-            <a class="button" href="/bruh">Marvel</a>
+        <a class="button" href="/bruh">Marvel</a>
     </div>
+
+</div>
+</body>
+
 {% endblock %}
