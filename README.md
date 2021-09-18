@@ -41,5 +41,9 @@
 #### We have continued working on the binary project where we [finished most of the hacks](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/8), and [got the images of the lightbulbs to change](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/9).
 Requirements | Evidence |                                                                                                                                                                                                                                       
 | :---- | :---- |
-| Binary Project | Almost done. With few exceptions, all HACK objectives have been completed. New buttons have been added that change the images on the page. CSS has been customized.  Input area has not been completed.![image](![binarypage](https://user-images.githubusercontent.com/82109882/133879280-9e10e3f1-a3fd-4b1a-a728-566f6b1180b5.PNG) ![thonaspage](https://user-images.githubusercontent.com/82109882/133879296-7766613d-ca87-4d2e-9bd3-fdafdc14fa52.PNG) |
-| Week 4 Video | ![video](https://github.com/CalrethilOfMirkwood/flask_portfolio/blob/main/static/assets/journal0.mp4) |
+| Binary Project | Almost done. With few exceptions, all HACK objectives have been completed. New buttons have been added that change the images on the page. CSS has been customized.  Input area has not been completed.![binarypage](https://user-images.githubusercontent.com/82109882/133879280-9e10e3f1-a3fd-4b1a-a728-566f6b1180b5.PNG) ![thonaspage](https://user-images.githubusercontent.com/82109882/133879296-7766613d-ca87-4d2e-9bd3-fdafdc14fa52.PNG) |
+
+
+
+https://user-images.githubusercontent.com/82109882/133908473-31cae80b-3956-41f9-a65a-5568a4a73c1a.mp4
+
