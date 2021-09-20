@@ -42,6 +42,10 @@ def jason():
 def video():
     return render_template("VideoP.html")
 
+@app.route('/rgb/')
+def rgb():
+    return render_template("rgb.html")
+
 @app.route('/Sophie/')
 def sussy():
     return render_template("sophie.html")
