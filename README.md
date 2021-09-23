@@ -42,6 +42,7 @@
 Requirements | Evidence |                                                                                                                                                                                                                                       
 | :---- | :---- |
 | Binary Project | Almost done. With few exceptions, all HACK objectives have been completed. New buttons have been added that change the images on the page. CSS has been customized.  Input area has not been completed.![binarypage](https://user-images.githubusercontent.com/82109882/133879280-9e10e3f1-a3fd-4b1a-a728-566f6b1180b5.PNG) ![thonaspage](https://user-images.githubusercontent.com/82109882/133879296-7766613d-ca87-4d2e-9bd3-fdafdc14fa52.PNG) |
+| RGB Project | There are many bugs and problems with the RGB project and so we are unable to get it working well. It is able to display the RGB and hex data values but it is unorganized and not good. The improved Big O notation image_data function is workign now. 
 
 
 
