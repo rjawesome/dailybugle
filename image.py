@@ -1,4 +1,4 @@
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 import numpy
 import base64
 from io import BytesIO
@@ -20,15 +20,15 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path="C:/Users/guoet/IdeaProjects/flask_project/static/img/", img_list=None):  # path of static images is defaulted
+def image_data(path="static/img/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
-            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
-            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
+            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg", 'position': (10,65), 'font': 70},
+            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png", 'position': (0,0), 'font': 5},
+            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png", 'position': (0,0), 'font': 5},
+            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png", 'position': (0,0), 'font': 5},
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png", 'position': (0,0), 'font': 5},
+            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png", 'position': (0,0), 'font': 5},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
@@ -38,8 +38,8 @@ def image_data(path="C:/Users/guoet/IdeaProjects/flask_project/static/img/", img
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         d1 = ImageDraw.Draw(img_reference)
-        # font = ImageFont.truetype("arial.ttf", img_dict['font'])
-        # d1.text(img_dict['position'], "MARVEL", fill=(255, 0, 0), font=font)
+        font = ImageFont.truetype("arial.ttf", img_dict['font'])
+        d1.text(img_dict['position'], "MARVEL", fill=(255, 0, 0), font=font)
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode

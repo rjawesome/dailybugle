@@ -1,6 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-# from image import image_data
+from image import image_data
 
 # create a Flask instance
 app = Flask(__name__)
@@ -45,7 +45,7 @@ def video():
 
 @app.route('/rgb/')
 def rgb():
-    return render_template("rgb.html")#, images=image_data())
+    return render_template(("rgb.html"), images=image_data())
 
 @app.route('/Sophie/')
 def sussy():
