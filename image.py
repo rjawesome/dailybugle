@@ -23,12 +23,12 @@ def image_formatter(img, img_type):
 def image_data(path=Path("static/img/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg", 'position': (10,65), 'font': 70},
-            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png", 'position': (0,0), 'font': 5},
-            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png", 'position': (0,0), 'font': 5},
-            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png", 'position': (0,0), 'font': 5},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png", 'position': (0,0), 'font': 5},
-            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png", 'position': (0,0), 'font': 5},
+            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
+            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
+            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
@@ -36,9 +36,9 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
         file = path / img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
-        d1 = ImageDraw.Draw(img_reference)
-        font = ImageFont.truetype("arial.ttf", img_dict['font'])
-        d1.text(img_dict['position'], "MARVEL", fill=(255, 0, 0), font=font)
+        # d1 = ImageDraw.Draw(img_reference)
+        # font = ImageFont.truetype("arial.ttf", img_dict['font'])
+        # d1.text(img_dict['position'], "MARVEL", fill=(255, 0, 0), font=font)
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
@@ -71,9 +71,10 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
     '''
-        Hex_Ref[256][256][256] = []
-        Bin_Ref[256][256][256] = []
-        Gray_Ref[256][256][256] = []
+        n = 256
+        Hex_Ref = [[[None for k in range(n)] for j in range(n)] for i in range(n)]
+        Bin_Ref = [[[None for k in range(n)] for j in range(n)] for i in range(n)]
+        Gray_Ref = [[[None for k in range(n)] for j in range(n)] for i in range(n)]
         for pixel in img_dict['data']:
             if not Hex_Ref[pixel[0]][pixel[1]][pixel[2]]:
                 hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
