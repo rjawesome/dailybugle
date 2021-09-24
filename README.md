@@ -5,6 +5,8 @@
      * [Sprint 2](#sprint-2)
        * [Week 3](#week-3)
        * [Week 4](#week-4)
+     * [Sprint 3](#sprint-3)
+     *  [Week 5](#week-5)
 <!--te-->
 ## Runtime Link: https://portfolio.nighthawkcodingsociety.com/
 # The People
@@ -39,11 +41,12 @@
 #### This week we reviewed our previous binary lesson, and we also learned about data compression and RGB.
 #### Our website grew with a [new homepage with an article slideshow](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/2), [a new CSS theme](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/2), and [a page to put soon-to-be articles](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/2).
 #### We have continued working on the binary project where we [finished most of the hacks](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/8), and [got the images of the lightbulbs to change](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/9).
-Requirements | Evidence |                                                                                                                                                                                                                                       
+| Requirements | Evidence |
 | :---- | :---- |
-| Binary Project | Almost done. With few exceptions, all HACK objectives have been completed. New buttons have been added that change the images on the page. CSS has been customized.  Input area has not been completed.![binarypage](https://user-images.githubusercontent.com/82109882/133879280-9e10e3f1-a3fd-4b1a-a728-566f6b1180b5.PNG) ![thonaspage](https://user-images.githubusercontent.com/82109882/133879296-7766613d-ca87-4d2e-9bd3-fdafdc14fa52.PNG) |
-
-
-
-https://user-images.githubusercontent.com/82109882/133908473-31cae80b-3956-41f9-a65a-5568a4a73c1a.mp4
-
+| Binary Project | Almost done. With few exceptions, all HACK objectives have been completed. New buttons have been added that change the images on the page. CSS has been customized.  Input area has not been completed.![binarypage](https://user-images.githubusercontent.com/82109882/133879280-9e10e3f1-a3fd-4b1a-a728-566f6b1180b5.PNG) ![thonaspage](https://user-images.githubusercontent.com/82109882/133879296-7766613d-ca87-4d2e-9bd3-fdafdc14fa52.PNG) | 
+## Sprint 3
+### Week 5
+#### This week we worked on the RGB project that applied last week's RGB lesson.
+| Requirements | Evidence|
+| :---- | :---- |
+| RGB Project |  While the backend of the RBG project is complete, the frontend is visually lacking.  It is able to display the contents of the RGB project but it is disorganized and stripped of any styling. The image_data function was optimized using Big O notation and text was added to the images with Pillow. ![image](https://user-images.githubusercontent.com/82109882/134606070-dfd97632-e32e-4341-8331-aee2cef86d6c.png) |
