@@ -1,7 +1,8 @@
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 import numpy
 import base64
 from io import BytesIO
+from pathlib import Path
 # Import the os module
 import os
 
@@ -19,25 +20,26 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path="static/img/", img_list=None):  # path of static images is defaulted
+def image_data(path="C:/Users/guoet/IdeaProjects/flask_project/static/img/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg", 'position': (10,65), 'font': 70},
-            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png", 'position': (0,0), 'font': 5},
-            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png", 'position': (0,0), 'font': 5},
-            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png", 'position': (0,0), 'font': 5},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png", 'position': (0,0), 'font': 5},
-            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png", 'position': (0,0), 'font': 5},
+            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
+            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
+            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
         ]
+
     # gather analysis data and meta data for each image, adding attributes to each row in table
-    for img_dict in img_list:
+    for img_dict in img_list:  # O(n*m)
         img_dict['path'] = '/' + path  # path for HTML access (frontend)
         file = path + img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         d1 = ImageDraw.Draw(img_reference)
-        font = ImageFont.truetype("arial.ttf", img_dict['font'])
-        d1.text(img_dict['position'], "MARVEL", fill=(255, 0, 0), font=font)
+        # font = ImageFont.truetype("arial.ttf", img_dict['font'])
+        # d1.text(img_dict['position'], "MARVEL", fill=(255, 0, 0), font=font)
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
@@ -48,7 +50,9 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
         img_dict['data'] = numpy.array(img_data)
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
+        img_dict['gray_data'] = []
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+
         for pixel in img_dict['data']:
             # hexadecimal conversions
             hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
@@ -67,7 +71,40 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
                 img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+    '''
+        Hex_Ref[256][256][256] = []
+        Bin_Ref[256][256][256] = []
+        Gray_Ref[256][256][256] = []
+        for pixel in img_dict['data']:
+            if not Hex_Ref[pixel[0]][pixel[1]][pixel[2]]:
+                hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+                hex_value = hex_value.replace("x", "0")
+                img_dict['hex_array'].append("#" + hex_value)
+                # binary conversions
+                bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+                img_dict['binary_array'].append(bin_value)
+                # gray data conversions
+                average = (pixel[0] + pixel[1] + pixel[2]) // 3
+                if len(pixel) > 3:
+                    img_dict['gray_data'].append((average, average, average, pixel[3]))
+                else:
+                    img_dict['gray_data'].append((average, average, average))
+                # Save to Reference
+                Hex_Ref[pixel[0]][pixel[1]][pixel[2]] = hex_value
+                Bin_Ref[pixel[0]][pixel[1]][pixel[2]] = bin_value
+                Gray_Ref[pixel[0]][pixel[1]][pixel[2]] = average
+            else:
 
+                img_dict['hex_array'].append("#" + Hex_Ref[pixel[0]][pixel[1]][pixel[2]])
+                img_dict['binary_array'].append(Bin_Ref[pixel[0]][pixel[1]][pixel[2]])
+                average = Gray_Ref[pixel[0]][pixel[1]][pixel[2]]
+                if len(pixel) > 3:
+                    img_dict['gray_data'].append((average, average, average, pixel[3]))
+                else:
+                    img_dict['gray_data'].append((average, average, average))
+        img_reference.putdata(img_dict['gray_data'])
+        img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+'''
     return img_list  # list is returned with all the attributes for each image dictionary
 
 
