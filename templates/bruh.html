@@ -22,11 +22,6 @@
                 background-image: url('/static/assets/thonas.jpg');
             }
 
-            .dark-mode {
-                background-color: black;
-                color: white;
-            }
-
             h1{
                 font-size: 5em;
             }
@@ -146,24 +141,14 @@
     </head>
 
 
-    <body style="font-family: gilroyLIGHT,serif; color: grey;" >
+    <body style="font-family: gilroyLIGHT,serif; color: white;" >
 
     <!-- Clock display -->
     <div class="px-3">
         <span id="clock"></span>
     </div>
-    <!-- Dark mode action -->
-    <div class="custom-control custom-switch">
-        <input class="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
-        <label class="custom-control-label" for="darkSwitch"></label>
-    </div>
     <!-- Navigation bar JavaScript support -->
     <script>
-        // Dark Mode Toggle
-        function darkFunction() {
-            let element = document.body;
-            element.classList.toggle("dark-mode");
-        }
         // Clock controller
         let clockElement = document.getElementById('clock');
         function clock() {
