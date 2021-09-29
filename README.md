@@ -50,3 +50,4 @@
 | Requirements | Evidence|
 | :---- | :---- |
 | RGB Project |  While the backend of the RBG project is complete, the frontend is visually lacking.  It is able to display the contents of the RGB project but it is disorganized and stripped of any styling. The image_data function was optimized using Big O notation and text was added to the images with Pillow. ![image](https://user-images.githubusercontent.com/82109882/134606070-dfd97632-e32e-4341-8331-aee2cef86d6c.png) |
+| Ethan Guo | Ethan has been able to finish all the efficiency of the image_data function. It went from being O(n*m*) to O(n) which is now much better than before. 
