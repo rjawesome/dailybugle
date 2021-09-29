@@ -10,6 +10,59 @@
 {% endblock %}
 
 {% block content %}
+    <head>
+        <title>The Daily Bugle</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">The Daily 🎺 Bugle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
+                <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Authors
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/Jason">Jason</a>
+                        <a class="dropdown-item" href="/Ethan">Ethan</a>
+                        <a class="dropdown-item" href="/Sophie">Sophie</a>
+                        <a class="dropdown-item" href="/Punnu">Punnu</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Mini Projects
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/Videop">Video Project</a>
+                        <a class="dropdown-item" href="/🥵🥵🔥SUS🥵🥵🔥">Greeting Project</a>
+                        <a class="dropdown-item" href="/💡💡💡">Binary Project</a>
+                        <a class="dropdown-item" href="/rgb">RGB Project</a>
+                    </div>
+                </li>
+
+                <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
+                <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
+                <a class="nav-link" href={{ url_for('articles') }}>Articles</a>
+                <!-- stub is shown using the name of the route -->
+                <a class="nav-link" href="stub">Stub</a>
+
+            </div>
+
+        </div>
+    </nav>
+
     <h1 class="text-center">RGB values within an Image</h1>
     <div class="container">
         <div class="row justify-content-md-center">
@@ -62,7 +115,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for row in image.data[:256+1] %}
+                                    {% for row in image.data[:256:+1] %}
                                         <tr>
                                             <td>{{loop.index}}</td>
                                             <td>{{row}}</td>
