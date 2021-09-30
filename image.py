@@ -62,18 +62,19 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
             img_dict['binary_array'].append(bin_value)
         # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
         img_dict['gray_data'] = []
-        average = (pixel[0] + pixel[1] + pixel[2]) // 3
-        if len(pixel) > 3:
-            img_dict['gray_data'].append((average, average, average, pixel[3]))
-        else:
-            img_dict['gray_data'].append((average, average, average))
+        for pixel in img_dict['data']:
+            average = (pixel[0] + pixel[1] + pixel[2]) // 3
+            if len(pixel) > 3:
+                img_dict['gray_data'].append((average, average, average, pixel[3]))
+            else:
+                img_dict['gray_data'].append((average, average, average))
+
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
     '''
-        n = 256
-        Hex_Ref = [[[None for k in range(n)] for j in range(n)] for i in range(n)]
-        Bin_Ref = [[[None for k in range(n)] for j in range(n)] for i in range(n)]
-        Gray_Ref = [[[None for k in range(n)] for j in range(n)] for i in range(n)]
+        Hex_Ref[256][256][256] = []
+        Bin_Ref[256][256][256] = []
+        Gray_Ref[256][256][256] = []
         for pixel in img_dict['data']:
             if not Hex_Ref[pixel[0]][pixel[1]][pixel[2]]:
                 hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]

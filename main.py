@@ -46,8 +46,9 @@ def video():
 
 @app.route('/rgb/')
 def rgb():
+    print("hello")
     path = Path(app.root_path) / "static" / "img"
-    return render_template('rgb.html', images=image_data(path))
+    return render_template("rgb.html", images=image_data(path))
 
 @app.route('/Sophie/')
 def sussy():

@@ -86,6 +86,7 @@
                         </td>
                         <td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
+
                             <!-- Hack: create button (btn{{loop.index}} to  call java script function
                                pass index to allow you to toggle images with hidden id's
                                {{image.base64}}  original image
@@ -93,9 +94,15 @@
                             -->
                             <button onclick = "GFG_Fun()">Gray Scale</button>
                             <script>
-                                function make_gray(){
-                                    document.getElementById("img<n>").src
-                                    document.getElementID("img_gray<n>").innerHTML = starter/img/lassen-volcano-256.jpg
+                                let grayscale = 0
+                                function GFG_Fun() {
+                                    if (grayscale === 0 ) {
+                                        document.body.style.filter = "grayscale(100%)";
+                                        grayscale = 100
+                                    } else if (grayscale === 100 ) {
+                                        document.body.style.filter = "grayscale(0%)";
+                                        grayscale = 0
+                                    }
                                 }
                             </script>
 
