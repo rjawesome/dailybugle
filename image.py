@@ -24,11 +24,14 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg", 'position': (10,65), 'font': 70},
+            {'source': "polygon.com", 'label': "Captain America", 'file': "captain.jpg", 'position': (300,400), 'font': 200},
+            {'source': "wallpapercave.com", 'label': "Thanos", 'file': "thanos.jpg", 'position': (90,500), 'font': 250},
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png", 'position': (0,0), 'font': 5},
             {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png", 'position': (0,0), 'font': 5},
             {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png", 'position': (0,0), 'font': 5},
             {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png", 'position': (0,0), 'font': 5},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png", 'position': (0,0), 'font': 5},
+            {'source': "zimbio.com", 'label': "Ned Leeds", 'file': "ned.jpg", 'position': (-100,400), 'font': 500},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
