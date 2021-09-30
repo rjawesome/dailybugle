@@ -51,6 +51,9 @@
 | :---- | :---- |
 | RGB Project |  While the backend of the RBG project is complete, the frontend is visually lacking.  It is able to display the contents of the RGB project but it is disorganized and stripped of any styling. The image_data function was optimized using Big O notation and text was added to the images with Pillow. ![image](https://user-images.githubusercontent.com/82109882/134606070-dfd97632-e32e-4341-8331-aee2cef86d6c.png) |
 | Ethan Guo | Ethan has been able to finish all the efficiency of the image_data function. It went from being O(n x m) to O(n) which is now much better than before. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/15)
+
+| Individual Work | Description |
+| :---- | :---- |
 | Sophie Park | Sophie has gotten the backend set up and has finished all Hack task for the backend. She was also tasked with using pillow to write text on the images adn she has done that arleady with red text saying "Marvel" on all the images. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/13)
 | | Sophie has also finished the Base2^n study journal. It is done on her jouranl. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/17) 
 | Punarvasu Sangam | Due to being missing for almost the entire last week, not a lot of work has been done yet. That is fine for now. He already has some development ideas that he is going to implement soon. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/16) 
