@@ -108,6 +108,21 @@
 
                             </script>
 
+                            <button onclick = "rotateImg()">Rotate 180°</button>
+                            <script>
+                                let rotation = 0;
+                                function rotateImg()
+                                {
+                                    rotation += 180;  // adds 180°
+
+                                    if (rotation === 360)
+                                    {
+                                        rotation = 0;
+                                    }
+                                    document.body.style.transform = `rotate(${rotation}deg)`;
+                                }
+                            </script>
+
 
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
