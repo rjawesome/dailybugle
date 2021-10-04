@@ -24,15 +24,20 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg", 'position': (10,65), 'font': 70},
-            {'source': "polygon.com", 'label': "Captain America", 'file': "captain.jpg", 'position': (300,400), 'font': 200},
-            {'source': "wallpapercave.com", 'label': "Thanos", 'file': "thanos.jpg", 'position': (90,500), 'font': 250},
+            # {'source': "polygon.com", 'label': "Captain America", 'file': "captain.jpg", 'position': (300,400), 'font': 200},
+            # {'source': "wallpapercave.com", 'label': "Thanos", 'file': "thanos.jpg", 'position': (90,500), 'font': 250},
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png", 'position': (0,0), 'font': 5},
             {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png", 'position': (0,0), 'font': 5},
             {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png", 'position': (0,0), 'font': 5},
             {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png", 'position': (0,0), 'font': 5},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png", 'position': (0,0), 'font': 5},
-            {'source': "zimbio.com", 'label': "Ned Leeds", 'file': "ned.jpg", 'position': (-100,400), 'font': 500},
+            # {'source': "zimbio.com", 'label': "Ned Leeds", 'file': "ned.jpg", 'position': (-100,400), 'font': 500},
         ]
+
+    n = 256
+    hex_ref = [[[None for _ in range(n)] for _ in range(n)] for _ in range(n)]
+    bin_ref = [[[None for _ in range(n)] for _ in range(n)] for _ in range(n)]
+    gray_ref = [[[None for _ in range(n)] for _ in range(n)] for _ in range(n)]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:  # O(n*m)
@@ -65,21 +70,17 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
             img_dict['binary_array'].append(bin_value)
         # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
         img_dict['gray_data'] = []
-        for pixel in img_dict['data']:
-            average = (pixel[0] + pixel[1] + pixel[2]) // 3
-            if len(pixel) > 3:
-                img_dict['gray_data'].append((average, average, average, pixel[3]))
-            else:
-                img_dict['gray_data'].append((average, average, average))
+        average = (pixel[0] + pixel[1] + pixel[2]) // 3
+        if len(pixel) > 3:
+            img_dict['gray_data'].append((average, average, average, pixel[3]))
+        else:
+            img_dict['gray_data'].append((average, average, average))
 
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
-    '''
-        Hex_Ref[256][256][256] = []
-        Bin_Ref[256][256][256] = []
-        Gray_Ref[256][256][256] = []
+        '''
         for pixel in img_dict['data']:
-            if not Hex_Ref[pixel[0]][pixel[1]][pixel[2]]:
+            if not hex_ref[pixel[0]][pixel[1]][pixel[2]]:
                 hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
                 hex_value = hex_value.replace("x", "0")
                 img_dict['hex_array'].append("#" + hex_value)
@@ -93,21 +94,21 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
                 else:
                     img_dict['gray_data'].append((average, average, average))
                 # Save to Reference
-                Hex_Ref[pixel[0]][pixel[1]][pixel[2]] = hex_value
-                Bin_Ref[pixel[0]][pixel[1]][pixel[2]] = bin_value
-                Gray_Ref[pixel[0]][pixel[1]][pixel[2]] = average
+                hex_ref[pixel[0]][pixel[1]][pixel[2]] = hex_value
+                bin_ref[pixel[0]][pixel[1]][pixel[2]] = bin_value
+                gray_ref[pixel[0]][pixel[1]][pixel[2]] = average
             else:
 
-                img_dict['hex_array'].append("#" + Hex_Ref[pixel[0]][pixel[1]][pixel[2]])
-                img_dict['binary_array'].append(Bin_Ref[pixel[0]][pixel[1]][pixel[2]])
-                average = Gray_Ref[pixel[0]][pixel[1]][pixel[2]]
+                img_dict['hex_array'].append("#" + hex_ref[pixel[0]][pixel[1]][pixel[2]])
+                img_dict['binary_array'].append(bin_ref[pixel[0]][pixel[1]][pixel[2]])
+                average = gray_ref[pixel[0]][pixel[1]][pixel[2]]
                 if len(pixel) > 3:
                     img_dict['gray_data'].append((average, average, average, pixel[3]))
                 else:
                     img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
-'''
+        '''
     return img_list  # list is returned with all the attributes for each image dictionary
 
 
