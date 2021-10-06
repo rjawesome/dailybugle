@@ -70,6 +70,10 @@ def bruh():
 def articles():
     return render_template("article.html")
 
+@app.route('/logic_gates')
+def logic_gates():
+    return render_template("logic_gates.html")
+
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])
 def greet():
