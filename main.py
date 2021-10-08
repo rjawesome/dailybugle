@@ -53,6 +53,10 @@ def rgb():
 @app.route('/Sophie/')
 def sussy():
     return render_template("sophie.html")
+
+@app.route('/colorcode/')
+def colorcode():
+    return render_template("colorcode.html")
 # Jason greeting project code
 @app.route('/Punnu/')
 def punnu():
@@ -124,6 +128,7 @@ def sup():
             return render_template("sus.html", name=name)
     # starting and empty input default
     return render_template("sus.html", name="World")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
