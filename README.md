@@ -1,13 +1,16 @@
 # [Flask Portfolio Starter Project](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 <!--ts-->
    * [The People](#the-people)
+   * [Theme Idea](#theme-idea)
    * [Progress Journal](#progress-journal)
-     * [Sprint 2](#sprint-2)
-       * [Week 3](#week-3)
-       * [Week 4](#week-4)
-     * [Sprint 3](#sprint-3)
-     *  [Week 5](#week-5)
-     *  [Week 6](#week-6)
+      * [Sprint 2](#sprint-2)
+         * [Week 3](#week-3)
+         * [Week 4](#week-4)
+      * [Sprint 3](#sprint-3)
+         * [Week 5](#week-5)
+         * [Week 6](#week-6)
+      * [Sprint 4](#sprint-4)
+         * [Week 7](#week-7)
 <!--te-->
 ## Runtime Link: https://portfolio.nighthawkcodingsociety.com/
 # The People
@@ -43,29 +46,46 @@
 #### Our website grew with a [new homepage with an article slideshow](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/2), [a new CSS theme](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/2), and [a page to put soon-to-be articles](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/2).
 #### We have continued working on the binary project where we [finished most of the hacks](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/8), and [got the images of the lightbulbs to change](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/9).
 | Requirements | Evidence |
-| :---- | :---- |
+| :----- | :----- |
 | Binary Project | Almost done. With few exceptions, all HACK objectives have been completed. New buttons have been added that change the images on the page. CSS has been customized.  Input area has not been completed.![binarypage](https://user-images.githubusercontent.com/82109882/133879280-9e10e3f1-a3fd-4b1a-a728-566f6b1180b5.PNG) ![thonaspage](https://user-images.githubusercontent.com/82109882/133879296-7766613d-ca87-4d2e-9bd3-fdafdc14fa52.PNG) | 
 ## Sprint 3
 ### Week 5
 #### This week we worked on the RGB project that applied last week's RGB lesson.
 | Requirements | Evidence |
-| :---- | :---- |
+| :----- | :----- |
 | RGB Project |  While the backend of the RGB project is complete, the frontend is visually lacking.  It is able to display the contents of the RGB project but it is disorganized and stripped of any styling. The image_data function was optimized using Big O notation and text was added to the images with Pillow. ![image](https://user-images.githubusercontent.com/82109882/134606070-dfd97632-e32e-4341-8331-aee2cef86d6c.png) |
  
 | Individual Work | Description |
-| :---- | :---- |
-| Ethan Guo | Ethan has been able to dramatically improve the efficiency of the image_data function.  It went from being O(n x m) to O(n) which is significantly better than before. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/15)
-| Sophie Park | Sophie has gotten the backend set up and has finished all backend Hack tasks.  She used pillow to write "MARVEL" in red text. Since the sizes of the images varied a lot she found a way to make a different font size+position for each image. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/13). Sophie has also finished the Base2^n study journal. It is on her journal. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/17) 
-| Punarvasu Sangam | Due to being missing for almost the entire last week, Punnu has not a lot of work has been done yet. That is fine for now. He already has some development ideas that he is going to implement soon. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/16) 
+| :----- | :----- |
+| Sophie Park | Sophie has gotten the backend set up and has finished all backend Hack tasks.  She used pillow to write "MARVEL" in red text. Since the sizes of the images varied a lot she found a way to make a different font size+position for each image. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/13). Sophie has also finished the Base2^n study journal. It is on her journal. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/17) |
+| Punarvasu Sangam | Due to being missing for almost the entire last week, Punnu has not a lot of work has been done yet. That is fine for now. He already has some development ideas that he is going to implement soon. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/16) |
+| Ethan Guo | Ethan has been able to dramatically improve the efficiency of the image_data function.  It went from being O(n x m) to O(n) which is significantly better than before. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/15) |
 | Jason Kaplan | Jason has already set up the frontend to be able to display the right data and get it to look nice. He has finished the Hack Assignment and now has a working button that turns all images to gray_scale. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/14) |
 ### Week 6
 | Requirements | Evidence |
-| :---- | :----- |
+| :----- | :------ |
 | RGB Project | The RGB project is now essentially finished.  The layout has been fixed and the backend text-writing, the front-end greyscale, and the image_data BigO notation are all functional.  The [project documentation](https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit#heading=h.baeoff914e24) is also complete ![rgb_week6](https://user-images.githubusercontent.com/82109882/135728508-3905ab3e-b7ec-44e6-97dc-33f97990a848.PNG) |
 
 | Individual Work | Description |
-| :---- | :---- |
-| Ethan Guo | The Big O notation has finished and the new code has been finished. It is able to properly work now and instead of being O(n^2) it is now O(n). [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/15) |
+| :----- | :----- |
 | Sophie Park | Sophie finished the backend and Base2^n study journal last week.  She did the [RGB project documentation](https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit#heading=h.baeoff914e24) this week. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/24) |
 | Punarvasu Sangam | Punnu has managed to get some rotation working along with a button, but there's a little surprise.  [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/16) |
+| Ethan Guo | The Big O notation has finished and the new code has been finished. It is able to properly work now and instead of being O(n^2) it is now O(n). [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/15) |
 | Jason Kaplan | Jason got the frontend greyscale switch to work. The website has a navbar and is correctly formatted as well.  [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/14) |
+## Sprint 4
+### Week 7
+| Requirements | Evidence |
+| :---- | :----- |
+| Multiply and Divide by 2 |  |
+| ASCII to Unicode |  |
+| Color Codes |  |
+| Unsigned Addition |  |
+| Logic Gates |  |
+| Signed Addition |  |
+
+| Individual Work | Description |
+| :----- | :----- |
+| Sophie Park |  |
+| Punarvasu Sangam |  |
+| Ethan Guo |  |
+| Jason Kaplan |  |

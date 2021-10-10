@@ -40,9 +40,13 @@ def stub2():
 def jason():
     return render_template("Jason.html")
 
-@app.route('/Videop/')
+@app.route('/videos/')
 def video():
     return render_template("VideoP.html")
+
+@app.route('/signedaddition/')
+def signed():
+    return render_template("signedaddition.html")
 
 @app.route('/rgb/')
 def rgb():
@@ -132,4 +136,4 @@ def sup():
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True,port=5555)
+    app.run(debug=True,port=5000)
