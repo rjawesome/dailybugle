@@ -1,11 +1,96 @@
+{% include "layouts/navbar.html" %}
+
+{% set project = "Logic Gates" %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<img src="/static/assets/logicgates.png/" height="800">
-<button type="button">Change Input</button>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Logic Gates</title>
+    </head>
+    <body>
+        <p style="margin-left: 20px; font-size: large">Logic Gates</p>
+
+        <p style="margin-left: 20px">For the inputs, an unchecked box = 0, and a checked box = 1.</p>
+
+        <p style="margin-left: 20px"> Note: For gates that only have one input, Input A will be used.</p>
+
+        <input style="margin-left: 20px" type="checkbox" id="input1" name="input1" value="Input A" />
+        <label for="input1">A</label>
+        <br>
+        <input style="margin-left: 20px" type="checkbox" id="input2" name="input2" value="Input B" />
+        <label for="input2">B</label>
+        <br>
+        <input style="margin-left: 20px" type="button" onclick="logicGates()" value="Submit">
+
+        <script>
+            function XOR(a,b)
+            {
+                return(a || b) && !(a || b);
+            }
+
+            function logicGates()
+            {
+                input1 = document.getElementById("input1").checked;
+                input2 = document.getElementById("input2").checked;
+                outputBUFFER = input1
+                outputAND = input1 && input2;
+                outputOR = input1 || input2;
+                outputXOR = XOR(input1,input2)
+                outputNOT = !input1
+                outputNAND = !(input1 && input2);
+                outputNOR = !(input1 || input2);
+                outputXNOR = !XOR(input1,input2)
+
+                document.getElementById("outputBUFFER_text").value = outputBUFFER;
+                document.getElementById("outputAND_text").value = outputAND;
+                document.getElementById("outputOR_text").value = outputOR;
+                document.getElementById("outputXOR_text").value = outputXOR;
+                document.getElementById("outputNOT_text").value = outputNOT;
+                document.getElementById("outputNAND_text").value = outputNAND;
+                document.getElementById("outputNOR_text").value = outputNOR;
+                document.getElementById("outputXNOR_text").value = outputXNOR;
+            }
+        </script>
+
+        <table style="margin-left: 20px" border="1">
+            <tr>
+                <th>Gate</th>
+                <th>Output</th>
+            </tr>
+
+            <tr>
+                <td><img src=/static/assets/gate_buffer.png></td>
+                <td><textarea id="outputBUFFER_text" rows="1" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td><img src=/static/assets/gate_and.png></td>
+                <td><textarea id="outputAND_text" rows="1" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td><img src=/static/assets/gate_or.png></td>
+                <td><textarea id="outputOR_text" rows="1" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td><img src=/static/assets/gate_xor.png></td>
+                <td><textarea id="outputXOR_text" rows="1" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td><img src=/static/assets/gate_not.png></td>
+                <td><textarea id="outputNOT_text" rows="1" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td><img src=/static/assets/gate_nand.png></td>
+                <td><textarea id="outputNAND_text" rows="1" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td><img src=/static/assets/gate_nor.png></td>
+                <td><textarea id="outputNOR_text" rows="1" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td><img src=/static/assets/gate_xnor.png></td>
+                <td><textarea id="outputXNOR_text" rows="1" cols="20"></textarea></td>
+            </tr>
+        </table>
+    </body>
 </html>
