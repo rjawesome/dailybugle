@@ -85,7 +85,7 @@
 
 | Individual Work | Description |
 | :----- | :----- |
-| Sophie Park |  |
+| Sophie Park | Sophie has made the templetes for both signed and unsigned addition and she has made calculated decimal values for both of the numbers to be added.  She did this by creating seperate IDs and writing seperate functions for each row.  However she is yet to make the signed addition *signed* adding the numbers and expressing them. [Signed Addition](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/25) [Unsigned Addition](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/29)|
 | Punarvasu Sangam | Punnu was in charge of doing the Logic Gates portion of this assignment. He has put in 8 logic gates; the Buffer, AND, OR, XOR, NOT, NAND, NOR, and XNOR. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/26) |
 | Ethan Guo | Ethan Guo was assigned to both the shift buttons that needed to be added and the adding of the unicode onto the binary project. Both of these issues were dealing with the binary project. The shift buttons are working well. They are able to multiple a numeber by 2 and divide a number by 2. When dividing an odd number, it always rounds down. The problem is the Binary portion of the binary project will suddenly shown .5 which is not right. e has tried usign the floor() function to eal with this but it has been unsuccessful. The unicode also has a slight problem. Although it is now able to display unicode, it is not displaying it together with the ascii values. [Shift Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/28) [Unicode Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/23)|
 | Jason Kaplan |  |
