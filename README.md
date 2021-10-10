@@ -69,7 +69,7 @@
 | Individual Work | Description |
 | :----- | :----- |
 | Sophie Park | Sophie finished the backend and Base2^n study journal last week.  She did the [RGB project documentation](https://docs.google.com/document/d/1p0HJV9DaE6A2R0R5cqNIFT2G01R6gcRTk_YQLqi-JYE/edit#heading=h.baeoff914e24) this week. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/24) |
-| Punarvasu Sangam | Punnu has managed to get some rotation working along with a button, but there's a little surprise.  [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/16) |
+| Punarvasu Sangam | Punnu has managed to get some rotation working along with a button, but there's a little surprise (it rotates the entire webpage instead of just the images).  [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/16) |
 | Ethan Guo | The Big O notation has finished and the new code has been finished. It is able to properly work now and instead of being O(n^2) it is now O(n). [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/15) |
 | Jason Kaplan | Jason got the frontend greyscale switch to work. The website has a navbar and is correctly formatted as well.  [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/14) |
 ## Sprint 4
@@ -86,6 +86,6 @@
 | Individual Work | Description |
 | :----- | :----- |
 | Sophie Park |  |
-| Punarvasu Sangam |  |
+| Punarvasu Sangam | Punnu was in charge of doing the Logic Gates portion of this assignment. He has put in 8 logic gates; the Buffer, AND, OR, XOR, NOT, NAND, NOR, and XNOR. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/26) |
 | Ethan Guo |  |
 | Jason Kaplan |  |
