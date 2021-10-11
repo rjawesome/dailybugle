@@ -69,16 +69,27 @@
             }
 
             // setter for DOM values
-            function setConversions0(binary0) {
-                const decimal0 = parseInt(binary0, 2)
+            function setConversions0(binary) {
+                const decimal = parseInt(binary, 2) - document.getElementById('digit00').value*256
                 // DOM assignment to Decimal conversion
-                document.getElementById('decimal0').innerHTML = decimal0.toString(10)
+                document.getElementById('decimal0').innerHTML = decimal.toString(10)
             }
 
-            function setConversions1(binary1) {
-                const decimal1 = parseInt(binary1, 2)
+            function setConversions1(binary) {
+                const decimal = parseInt(binary, 2) - document.getElementById('digit10').value*256
                 // DOM assignment to Decimal conversion
-                document.getElementById('decimal1').innerHTML = decimal1.toString(10)
+                document.getElementById('decimal1').innerHTML = decimal.toString(10)
+            }
+
+            function addDecimal() {
+                console.log("addDecimal")
+                result = (parseInt(getBits0(), 2) - document.getElementById('digit00').value*256) + (parseInt(getBits1(), 2) - document.getElementById('digit10').value*256)
+                if ((-128 > result) || (result > 127)) {
+                    document.getElementById('result').innerHTML = result.toString() + ", overflow"
+                }
+                else {
+                    document.getElementById('result').innerHTML = result
+                }
             }
 
             // toggle selected bit and recalculate
@@ -100,6 +111,7 @@
                 // Binary numbers
                 const binary0 = getBits0();
                 setConversions0(binary0);
+                addDecimal();
             }
 
             function toggleBit1(i) {
@@ -120,6 +132,7 @@
                 // Binary numbers
                 const binary1 = getBits1();
                 setConversions1(binary1);
+                addDecimal();
             }
 
 
@@ -223,7 +236,7 @@
                     </tr>
                 </table>
 
-                <h1 style="align: justify">+</h1>
+                <h1>+</h1>
 
                 <table class="table">
                     <tr>
@@ -281,6 +294,12 @@
 
                         <td><input type='text' id='digit17' Value="0" size="1" readonly></td>
                     </tr>
+                </table>
+
+                <h1>=</h1>
+
+                <table class="table">
+                    <td id="result">0</td>
                 </table>
             </div>
         </div>

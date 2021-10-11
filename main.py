@@ -74,9 +74,9 @@ def punnu():
 def binary():
     return render_template("binary.html")
 
-@app.route('/bruh')
+@app.route('/thonas')
 def bruh():
-    return render_template("bruh.html")
+    return render_template("thonas.html")
 
 @app.route('/articles')
 def articles():

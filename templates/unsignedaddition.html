@@ -81,6 +81,17 @@
                 document.getElementById('decimal1').innerHTML = decimal1.toString(10)
             }
 
+            function addDecimal() {
+                console.log("addDecimal")
+                result = parseInt(getBits0(), 2)+ parseInt(getBits1(), 2)
+                if (result > 127) {
+                    document.getElementById('result').innerHTML = result.toString() + ", overflow"
+                }
+                else {
+                    document.getElementById('result').innerHTML = result
+                }
+            }
+
             // toggle selected bit and recalculate
             function toggleBit0(i) {
                 //alert("Digit action: " + i );
@@ -100,6 +111,7 @@
                 // Binary numbers
                 const binary0 = getBits0();
                 setConversions0(binary0);
+                addDecimal();
             }
 
             function toggleBit1(i) {
@@ -120,6 +132,7 @@
                 // Binary numbers
                 const binary1 = getBits1();
                 setConversions1(binary1);
+                addDecimal();
             }
 
 
@@ -282,6 +295,13 @@
                         <td><input type='text' id='digit17' Value="0" size="1" readonly></td>
                     </tr>
                 </table>
+
+                <h1>=</h1>
+
+                <table class="table">
+                    <td id="result">0</td>
+                </table>
+
             </div>
         </div>
     </div>
