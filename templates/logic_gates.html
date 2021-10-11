@@ -24,10 +24,6 @@
         <input style="margin-left: 20px" type="button" onclick="logicGates()" value="Submit">
 
         <script>
-            function XOR(a,b)
-            {
-                return(a || b) && !(a || b);
-            }
 
             function logicGates()
             {
@@ -36,11 +32,11 @@
                 outputBUFFER = input1
                 outputAND = input1 && input2;
                 outputOR = input1 || input2;
-                outputXOR = XOR(input1,input2)
+                outputXOR = (input1 && !input2) || (!input1 && input2);
                 outputNOT = !input1
                 outputNAND = !(input1 && input2);
                 outputNOR = !(input1 || input2);
-                outputXNOR = !XOR(input1,input2)
+                outputXNOR = !((input1 && !input2) || (!input1 && input2));
 
                 document.getElementById("outputBUFFER_text").value = outputBUFFER;
                 document.getElementById("outputAND_text").value = outputAND;
