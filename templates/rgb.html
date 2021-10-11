@@ -1,164 +1,149 @@
 <!DOCTYPE html>
-{% block meta %}
-    <script>
-        // Hack: add java script function to toggle image from original to gray and back (toggle)
-        //  document.getElementById("img<n>").src
-        //  document.getElementID("img_gray<n>").innerHTML
-        //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
-    </script>
-    <title>RGB starter</title>
-{% endblock %}
+{% extends "layouts/navbar.html" %}
 
 {% block content %}
-    <head>
-        <title>The Daily Bugle</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </head>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="http://127.0.0.1:5000/">The Daily 🎺 Bugle</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-                <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Authors
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/Jason">Jason</a>
-                        <a class="dropdown-item" href="/Ethan">Ethan</a>
-                        <a class="dropdown-item" href="/Sophie">Sophie</a>
-                        <a class="dropdown-item" href="/Punnu">Punnu</a>
-                    </div>
-                </li>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <button onclick = "rotateImg()">Rotate 180°</button>
+    <script>
+        let rotation = 0;
+        function rotateImg()
+        {
+            rotation += 180;  // adds 180°
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Mini Projects
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/Videop">Video Project</a>
-                        <a class="dropdown-item" href="/🥵🥵🔥SUS🥵🥵🔥">Greeting Project</a>
-                        <a class="dropdown-item" href="/💡💡💡">Binary Project</a>
-                        <a class="dropdown-item" href="/rgb">RGB Project</a>
-                    </div>
-                </li>
+            if (rotation === 360)
+            {
+                rotation = 0;
+            }
+            document.body.style.transform = `rotate(${rotation}deg)`;
+        }
 
-                <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
-                <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
-                <a class="nav-link" href={{ url_for('articles') }}>Articles</a>
-                <!-- stub is shown using the name of the route -->
-                <a class="nav-link" href="stub">Stub</a>
+        let rotation = 0;
+        function rotateImg()
+        {
+            rotation += 180;  // adds 180°
 
-            </div>
+            if (rotation === 360)
+        {
+            rotation = 0;
+        }
+            document.body.style.transform = `rotate(${rotation}deg)`;
+        }
 
-        </div>
-    </nav>
+    </script>
+    <style>
+        html, body{
+            margin: 0;
+            height: 100%;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: mintcream;
+            color: black;
+            font-family: "Comic Sans MS", sans-serif;
+        }
 
-    <h1 class="text-center">RGB values within an Image</h1>
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <table class="table">
-                <thead>
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        h1{
+            font-size: 5em;
+        }
+
+        a {
+            color: midnightblue;
+        }
+        .button {
+            background-color: lightgreen;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="text-center">RGB values within an Image</h1>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Meta Data</th>
+                <th>Image</th>
+                <th>Data</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for image in images %}
                 <tr>
-                    <th>Meta Data</th>
-                    <th>Image</th>
-                    <th>Data</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for image in images %}
-                    <tr>
-                        <td>
-                            <div>{{image.label}}</div>
-                            <div>{{image.source}}</div>
-                            <div>{{image.file}}</div>
-                            <div>{{image.format}}</div>
-                            <div>{{image.size}}</div>
-                        </td>
-                        <td>
-                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
+                    <td>
+                        <div>{{image.label}}</div>
+                        <div>{{image.source}}</div>
+                        <div>{{image.file}}</div>
+                        <div>{{image.format}}</div>
+                        <div>{{image.size}}</div>
+                    </td>
+                    <td>
+                        <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
 
-                            <!-- Hack: create button (btn{{loop.index}} to  call java script function
-                               pass index to allow you to toggle images with hidden id's
-                               {{image.base64}}  original image
-                               {{image.base64_GRAY}}  gray scale image
-                            -->
-                            <button onclick = "GFG_Fun()">Gray Scale</button>
-                            <script>
+                        <!-- Hack: create button (btn{{loop.index}} to  call java script function
+                           pass index to allow you to toggle images with hidden id's
+                           {{image.base64}}  original image
+                           {{image.base64_grey}}  grey scale image
+                        -->
+                        <button onclick = "GFG_Fun()">Grey Scale</button>
 
-                                let grayscale = 0
-                                function GFG_Fun() {
-                                    if (grayscale === 0 ) {
-                                        document.body.style.filter = "grayscale(100%)";
-                                        grayscale = 100
-                                    } else if (grayscale === 100 ) {
-                                        document.body.style.filter = "grayscale(0%)";
-                                        grayscale = 0
-                                    }
-                                }
+                        <button onclick = "rotateImg()">Rotate 180°</button>
 
-                            </script>
-
-                            <button onclick = "rotateImg()">Rotate 180°</button>
-                            <script>
-                                let rotation = 0;
-                                function rotateImg()
-                                {
-                                    rotation += 180;  // adds 180°
-
-                                    if (rotation === 360)
-                                    {
-                                        rotation = 0;
-                                    }
-                                    document.body.style.transform = `rotate(${rotation}deg)`;
-                                }
-                            </script>
-
-
-                            <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
-                            <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
-                        </td>
-                        <td>
-                            <div class="overflow-auto" style="height: 256px">
-                                <table class="table">
-                                    <thead>
+                        <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
+                        <p hidden id="img_grey{{loop.index}}">{{image.base64_grey}}</p>
+                    </td>
+                    <td>
+                        <div class="overflow-auto" style="height: 256px">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>{{image.mode}}</th>
+                                    <th>Hex Code</th>
+                                    <th>Binary</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for row in image.data[:256:+1] %}
                                     <tr>
-                                        <th>#</th>
-                                        <th>{{image.mode}}</th>
-                                        <th>Hex Code</th>
-                                        <th>Binary</th>
+                                        <td>{{loop.index}}</td>
+                                        <td>{{row}}</td>
+                                        <td>{{image.hex_array[loop.index - 1]}}</td>
+                                        <td>{{image.binary_array[loop.index - 1]}}
                                     </tr>
-                                    </thead>
-                                    <tbody>
-                                    {% for row in image.data[:256:+1] %}
-                                        <tr>
-                                            <td>{{loop.index}}</td>
-                                            <td>{{row}}</td>
-                                            <td>{{image.hex_array[loop.index - 1]}}</td>
-                                            <td>{{image.binary_array[loop.index - 1]}}
-                                        </tr>
-                                        {% if loop.index > 256 %}
-                                            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
-                                        {% endif %}
-                                    {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+                                    {% if loop.index > 256 %}
+                                        <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
+                                    {% endif %}
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-        </div>
     </div>
+</div>
+</body>
 {% endblock %}
