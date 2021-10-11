@@ -82,7 +82,6 @@
             }
 
             function addDecimal() {
-                console.log("addDecimal")
                 result = (parseInt(getBits0(), 2) - document.getElementById('digit00').value*256) + (parseInt(getBits1(), 2) - document.getElementById('digit10').value*256)
                 if ((-128 > result) || (result > 127)) {
                     document.getElementById('result').innerHTML = result.toString() + ", overflow"

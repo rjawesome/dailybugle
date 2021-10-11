@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6951eb7-8294-437e-be56-b2696eed929a" name="Changes" comment="add unsignedaddition.html, update readme">
-      <change afterPath="$PROJECT_DIR$/templates/thonas.html" afterDir="false" />
+    <list default="true" id="e6951eb7-8294-437e-be56-b2696eed929a" name="Changes" comment="signed addition is *signed* now, addition added&#10;also fixed the indent and got rid of the calculator in binary.html, renamed bruh.html to thonas.html, and added the navbar and fixed organization of colorcode.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/binary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/binary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bruh.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/colorcode.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/colorcode.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/signedaddition.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signedaddition.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/unsignedaddition.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/unsignedaddition.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +173,7 @@
       <workItem from="1632259630393" duration="38204000" />
       <workItem from="1633036154462" duration="11032000" />
       <workItem from="1633737020359" duration="1606000" />
-      <workItem from="1633925057464" duration="3502000" />
+      <workItem from="1633925057464" duration="5319000" />
     </task>
     <task id="LOCAL-00001" summary="OwO">
       <created>1629786104171</created>
@@ -335,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633910377081</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="signed addition is *signed* now, addition added&#10;also fixed the indent and got rid of the calculator in binary.html, renamed bruh.html to thonas.html, and added the navbar and fixed organization of colorcode.html">
+      <created>1633928818229</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1633928818229</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +383,8 @@
     <MESSAGE value="RGB Project Big O Notation and RGB Button" />
     <MESSAGE value="RGB Big O Notation: Simple Change" />
     <MESSAGE value="add unsignedaddition.html, update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="add unsignedaddition.html, update readme" />
+    <MESSAGE value="signed addition is *signed* now, addition added&#10;also fixed the indent and got rid of the calculator in binary.html, renamed bruh.html to thonas.html, and added the navbar and fixed organization of colorcode.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="signed addition is *signed* now, addition added&#10;also fixed the indent and got rid of the calculator in binary.html, renamed bruh.html to thonas.html, and added the navbar and fixed organization of colorcode.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -395,7 +397,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/templates/signedaddition.html</url>
-          <line>87</line>
+          <line>86</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -408,7 +410,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/flask_portfolio2$main.coverage" NAME="main Coverage Results" MODIFIED="1633555005843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/flask_portfolio$main.coverage" NAME="main Coverage Results" MODIFIED="1633928573242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_portfolio$main.coverage" NAME="main Coverage Results" MODIFIED="1633928649187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask_project$flask_project.coverage" NAME="Python 3.10 Coverage Results" MODIFIED="1631224930112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/flask_portfolio$techtalk7.coverage" NAME="techtalk7 Coverage Results" MODIFIED="1633640488066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates" />
     <SUITE FILE_PATH="coverage/flask_portfolio$Python_3_10.coverage" NAME="Python 3.10 Coverage Results" MODIFIED="1633846319238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
