@@ -1,7 +1,7 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <title>The Daily Bugle</title>
@@ -22,7 +22,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         -moz-animation: fadein 2s; /* Firefox */
         -webkit-animation: fadein 2s; /* Safari and Chrome */
         -o-animation: fadein 2s; /* Opera */
-        background-color: cream;
+        background-color: mintcream;
         color: black;
         font-family: "Times New Roman", serif;
     }
@@ -39,6 +39,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     a {
         color: midnightblue;
     }
+
     .button {
         background-color: lightgreen;
         border: none;
@@ -77,7 +78,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     Mini Projects
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/Videop">Video Project</a>
+                    <a class="dropdown-item" href="/videos">Video Project</a>
                     <a class="dropdown-item" href="/🥵🥵🔥SUS🥵🥵🔥">Greeting Project</a>
                     <a class="dropdown-item" href="/💡💡💡">Binary Project</a>
                     <a class="dropdown-item" href="/rgb">RGB Project</a>
@@ -93,9 +94,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('articles') }}>Articles</a>
             <!-- stub is shown using the name of the route -->
             <a class="nav-link" href="stub">Stub</a>
-
         </div>
-
     </div>
 </nav>
 </head>

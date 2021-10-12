@@ -7,24 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Logic Gates</title>
-    </head>
-    <body>
-        <p style="margin-left: 20px; font-size: large">Logic Gates</p>
-
-        <p style="margin-left: 20px">For the inputs, an unchecked box = 0, and a checked box = 1.</p>
-
-        <p style="margin-left: 20px"> Note: For gates that only have one input, Input A will be used.</p>
-
-        <input style="margin-left: 20px" type="checkbox" id="input1" name="input1" value="Input A" />
-        <label for="input1">A</label>
-        <br>
-        <input style="margin-left: 20px" type="checkbox" id="input2" name="input2" value="Input B" />
-        <label for="input2">B</label>
-        <br>
-        <input style="margin-left: 20px" type="button" onclick="logicGates()" value="Submit">
-
         <script>
-
             function logicGates()
             {
                 input1 = document.getElementById("input1").checked;
@@ -48,45 +31,100 @@
                 document.getElementById("outputXNOR_text").value = outputXNOR;
             }
         </script>
+        <style>
+            html, body{
+            margin: 0;
+            height: 100%;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: mintcream;
+            color: black;
+            font-family: "Comic Sans MS", sans-serif;
+            }
 
-        <table style="margin-left: 20px" border="1">
-            <tr>
-                <th>Gate</th>
-                <th>Output</th>
-            </tr>
+            .dark-mode {
+            background-color: black;
+            color: white;
+            }
 
-            <tr>
-                <td><img src=/static/assets/gate_buffer.png></td>
-                <td><textarea id="outputBUFFER_text" rows="1" cols="20"></textarea></td>
-            </tr>
-            <tr>
-                <td><img src=/static/assets/gate_and.png></td>
-                <td><textarea id="outputAND_text" rows="1" cols="20"></textarea></td>
-            </tr>
-            <tr>
-                <td><img src=/static/assets/gate_or.png></td>
-                <td><textarea id="outputOR_text" rows="1" cols="20"></textarea></td>
-            </tr>
-            <tr>
-                <td><img src=/static/assets/gate_xor.png></td>
-                <td><textarea id="outputXOR_text" rows="1" cols="20"></textarea></td>
-            </tr>
-            <tr>
-                <td><img src=/static/assets/gate_not.png></td>
-                <td><textarea id="outputNOT_text" rows="1" cols="20"></textarea></td>
-            </tr>
-            <tr>
-                <td><img src=/static/assets/gate_nand.png></td>
-                <td><textarea id="outputNAND_text" rows="1" cols="20"></textarea></td>
-            </tr>
-            <tr>
-                <td><img src=/static/assets/gate_nor.png></td>
-                <td><textarea id="outputNOR_text" rows="1" cols="20"></textarea></td>
-            </tr>
-            <tr>
-                <td><img src=/static/assets/gate_xnor.png></td>
-                <td><textarea id="outputXNOR_text" rows="1" cols="20"></textarea></td>
-            </tr>
-        </table>
+            h1{
+            font-size: 5em;
+            }
+
+            a {
+            color: midnightblue;
+            }
+
+            .button {
+            background-color: lightgreen;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="text-center">Logic Gates</h1>
+        <div class="container">
+            <div class="col-8">
+                <p>For the inputs, an unchecked box = 0, and a checked box = 1.</p>
+
+                <p> Note: For gates that only have one input, Input A will be used.</p>
+
+                <input type="checkbox" id="input1" name="input1" value="Input A" />
+                <label for="input1">A</label>
+                <br>
+                <input type="checkbox" id="input2" name="input2" value="Input B" />
+                <label for="input2">B</label>
+                <br>
+                <input class="button" type="button" onclick="logicGates()" value="Submit">
+            </div>
+
+            <table class="table">
+                <tr>
+                    <th>Gate</th>
+                    <th>Output</th>
+                </tr>
+
+                <tr>
+                    <td><img src=/static/assets/gate_buffer.png></td>
+                    <td><textarea id="outputBUFFER_text" rows="1" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><img src=/static/assets/gate_and.png></td>
+                    <td><textarea id="outputAND_text" rows="1" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><img src=/static/assets/gate_or.png></td>
+                    <td><textarea id="outputOR_text" rows="1" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><img src=/static/assets/gate_xor.png></td>
+                    <td><textarea id="outputXOR_text" rows="1" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><img src=/static/assets/gate_not.png></td>
+                    <td><textarea id="outputNOT_text" rows="1" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><img src=/static/assets/gate_nand.png></td>
+                    <td><textarea id="outputNAND_text" rows="1" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><img src=/static/assets/gate_nor.png></td>
+                    <td><textarea id="outputNOR_text" rows="1" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><img src=/static/assets/gate_xnor.png></td>
+                    <td><textarea id="outputXNOR_text" rows="1" cols="20"></textarea></td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
