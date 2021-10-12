@@ -76,16 +76,16 @@
 ### Week 7
 | Requirements | Evidence |
 | :---- | :----- |
-| Multiply and Divide by 2 | ![binarypageweek7](https://user-images.githubusercontent.com/82109882/136895890-8fa9cbb5-2eff-4ffe-a82b-84448179da54.PNG) |
+| Multiply and Divide by 2 |![binaryweek7](https://user-images.githubusercontent.com/82109882/136897125-32f9b293-10fb-49fe-bbc1-788c718a1ea6.PNG)  |
 | ASCII to Unicode | see above image |
-| Color Codes | ![colorcode](https://user-images.githubusercontent.com/82109882/136895905-75c728c1-6ccb-4b9c-b768-3f4189c85e1b.PNG) |
-| Signed Addition | ![signedaddition](https://user-images.githubusercontent.com/82109882/136895923-f103fea7-d875-447b-8b11-e49dcf2745c6.PNG) |
-| Unsigned Addition | ![unsignedaddition](https://user-images.githubusercontent.com/82109882/136895928-e98b205c-719b-4b12-bc5b-dbec51a8e1b7.PNG) |
-| Logic Gates | ![logicgate](https://user-images.githubusercontent.com/82109882/136895933-cea4ec28-b3fd-415e-8a2a-d65f672d6bff.PNG) |
+| Color Codes | ![colorcode](https://user-images.githubusercontent.com/82109882/136896727-ede87799-e0ec-40c7-bd04-2dd9cb58b2bb.PNG) |
+| Logic Gates | ![logicgates](https://user-images.githubusercontent.com/82109882/136897133-d6373318-900c-45d3-b139-b7e0f2991422.PNG) |
+| Signed Addition | ![signedaddition](https://user-images.githubusercontent.com/82109882/136896679-51a8b4ff-df5d-4283-8481-cea312632d67.PNG) |
+| Unsigned Addition | ![unsignedaddition](https://user-images.githubusercontent.com/82109882/136896782-166100b2-26bf-4495-aa00-f3e4ab1fc498.PNG) |
 
 | Individual Work | Description |
 | :----- | :----- |
-| Sophie Park | Sophie has made the templates for both signed and unsigned addition and got the sum of the added numbers.  She did this by creating separate IDs and functions for each row and created a function to add the two numbers.  However she is yet to express the sum in binary. [Signed Addition](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/25), [Unsigned Addition](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/29)|
+| Sophie Park | Sophie has completed both signed and unsigned addition.  She created separate IDs and functions for each row and created a function to add the two numbers. [Signed Addition](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/25), [Unsigned Addition](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/29)|
 | Punarvasu Sangam | Punnu was in charge of doing the Logic Gates portion of this assignment. He has put in 8 logic gates; the Buffer, AND, OR, XOR, NOT, NAND, NOR, and XNOR. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/26) |
 | Ethan Guo | Ethan was assigned to adding the shift buttons and the unicode display onto the binary project.  The shift buttons are working well, they are able to multiply and divide a number by 2 (decimal results round down in the lighbulb display). The problem is the display bar of the binary project will wrongly show .5. Ethan has tried using the floor() function to sove this but was unsuccessful. The unicode also has a slight problem; although unicode is displayed, it is not displayed with ASCII. [Shift](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/28), [Unicode](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/23)|
 | Jason Kaplan | Jason has completed the color code project.  It has a bit toggle and color display for each color in RGB and also shows the combined color below. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/27)|
