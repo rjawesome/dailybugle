@@ -76,6 +76,7 @@
 ### Week 7
 | Requirements | Evidence |
 | :---- | :----- |
+| Week 7 Video | [video link](https://drive.google.com/file/d/1GgnGxgljVy_4PTIPwn1fF_pYdiOkNr2p/view?usp=sharing) |
 | Multiply and Divide by 2 |![binaryweek7](https://user-images.githubusercontent.com/82109882/136897125-32f9b293-10fb-49fe-bbc1-788c718a1ea6.PNG)  |
 | ASCII to Unicode | see above image |
 | Color Codes | ![colorcode](https://user-images.githubusercontent.com/82109882/136896727-ede87799-e0ec-40c7-bd04-2dd9cb58b2bb.PNG) |
