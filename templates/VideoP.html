@@ -1,5 +1,5 @@
 <!-- Extending the predefined project layout -->
-{% extends "layouts/navbar.html" %}
+{% include "layouts/navbar.html" %}
 
 <!- This variable sets name of browser tab  -->
 {% set project = "Videos" %}
@@ -8,8 +8,10 @@
 {% block body %}
     <h1>Tech Talk 1</h1>
     <video controls><source src="https://drive.google.com/uc?export=download&id=10uBKtVTNeEcgQx8RQYaB87j5VtbcsiNG" type="video/mp4"></video>
-    <h1>Sprint 3 - Week 4</h1>
+    <br><br><br><h1>Sprint 3 - Week 4</h1>
     <video controls><source src="/static/assets/Sprint_34_Week_4.mp4" type="video/mp4"></video>
+    <br><br><br><h1>Sprint 4 - Week 7</h1>
+    <video controls><source src="/static/assets/Week7.mp4" type="video/mp4"></video>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->

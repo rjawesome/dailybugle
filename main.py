@@ -65,7 +65,7 @@ def sussy():
 @app.route('/colorcode/')
 def colorcode():
     return render_template("colorcode.html")
-# Jason greeting project code
+
 @app.route('/Punnu/')
 def punnu():
     return render_template("punnu.html")
