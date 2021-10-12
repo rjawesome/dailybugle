@@ -76,12 +76,12 @@
 ### Week 7
 | Requirements | Evidence |
 | :---- | :----- |
-| Multiply and Divide by 2 |  |
-| ASCII to Unicode |  |
-| Color Codes |  |
-| Unsigned Addition |  |
-| Logic Gates |  |
-| Signed Addition |  |
+| Multiply and Divide by 2 | ![binarypageweek7](https://user-images.githubusercontent.com/82109882/136895890-8fa9cbb5-2eff-4ffe-a82b-84448179da54.PNG) |
+| ASCII to Unicode | see above image |
+| Color Codes | ![colorcode](https://user-images.githubusercontent.com/82109882/136895905-75c728c1-6ccb-4b9c-b768-3f4189c85e1b.PNG) |
+| Signed Addition | ![signedaddition](https://user-images.githubusercontent.com/82109882/136895923-f103fea7-d875-447b-8b11-e49dcf2745c6.PNG) |
+| Unsigned Addition | ![unsignedaddition](https://user-images.githubusercontent.com/82109882/136895928-e98b205c-719b-4b12-bc5b-dbec51a8e1b7.PNG) |
+| Logic Gates | ![logicgate](https://user-images.githubusercontent.com/82109882/136895933-cea4ec28-b3fd-415e-8a2a-d65f672d6bff.PNG) |
 
 | Individual Work | Description |
 | :----- | :----- |
