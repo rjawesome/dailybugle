@@ -88,10 +88,20 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href="/unsignedaddition">Unsigned Addition</a>
                 </div>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Articles
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/articlea">Article 1</a>
+                    <a class="dropdown-item" href="/articleb">Article 2</a>
+                    <a class="dropdown-item" href="/articlec">Article 3</a>
+                </div>
+            </li>
+
 
             <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
             <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
-            <a class="nav-link" href={{ url_for('articles') }}>Articles</a>
             <!-- stub is shown using the name of the route -->
             <a class="nav-link" href="stub">Stub</a>
         </div>

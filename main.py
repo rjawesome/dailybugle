@@ -20,6 +20,18 @@ def kangaroos():
 def walruses():
     return render_template("walruses.html")
 
+@app.route('/articlea/')
+def article_a():
+    return render_template("ArticleA.html")
+
+@app.route('/articleb/')
+def article_b():
+    return render_template("ArticleB.html")
+
+@app.route('/articlec/')
+def article_c():
+    return render_template("ArticleC.html")
+
 @app.route('/hawkers/')
 def hawkers():
     return render_template("hawkers.html")
