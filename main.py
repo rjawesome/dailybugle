@@ -98,6 +98,18 @@ def articles():
 def logic_gates():
     return render_template("logic_gates.html")
 
+@api_bp.route('/joke')
+def get_joke():
+    if len(jokes) == 0:
+        _init_jokes()
+    return jsonify(random.choice(jokes))
+
+@api_bp.route('/jokes')
+def get_jokes():
+    if len(jokes) == 0:
+        _init_jokes()
+    return jsonify(jokes)
+
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])
 def greet():
