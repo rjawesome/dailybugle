@@ -1,7 +1,8 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Blueprint, jsonify
 from image import image_data
 from pathlib import Path
+
 
 # create a Flask instance
 app = Flask(__name__)
