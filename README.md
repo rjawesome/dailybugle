@@ -31,10 +31,11 @@
 #### It will be based on real-life news and fictional news like the Xenonion.  We will each write several brief articles for different sections.  We are currently planning on Global News, Business+Finance, Opinion, and Entertainment.
 #### We will likely need:
 ##### 1. To write several ~1-paragraph long articles
-##### 2. Different pages for each section (index.html will be highlights from all sections and the newest articles)
-##### 3. Stacked, floating boxes in columns that are links to articles
-##### 4. A potential scrolling article highlights at the front of the page
-##### 5. Humorous fictional "advertisements"
+##### 2. 4 different article sections: Breaking News, Entertainment, Opinions, and Politics
+##### 3. Different pages for each section (index.html will be highlights from all sections and the newest articles)
+##### 4. Stacked, floating boxes in columns that are links to articles
+##### 5. A potential scrolling article highlights at the front of the page
+##### 6. Humorous fictional "advertisements"
 # Progress Journal
 ## Sprint 2
 ### Week 3

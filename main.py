@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, Blueprint, jsonify
 from image import image_data
 from pathlib import Path
-
+# from api.webapi import api_bp
 
 # create a Flask instance
 app = Flask(__name__)
@@ -91,25 +91,41 @@ def binary():
 def bruh():
     return render_template("thonas.html")
 
-@app.route('/articles')
-def articles():
-    return render_template("article.html")
-
 @app.route('/logic_gates')
 def logic_gates():
     return render_template("logic_gates.html")
 
-@api_bp.route('/joke')
-def get_joke():
-    if len(jokes) == 0:
-        _init_jokes()
-    return jsonify(random.choice(jokes))
+@app.route('/bREAKING-nEWS')
+def breaking():
+    return render_template("breakingnews.html")
 
-@api_bp.route('/jokes')
-def get_jokes():
-    if len(jokes) == 0:
-        _init_jokes()
-    return jsonify(jokes)
+@app.route('/youropinioniswrong')
+def opinions():
+    return render_template("opinions.html")
+
+@app.route('/mindlesspleasure')
+def entertainment():
+    return render_template("entertainment.html")
+
+@app.route('/fakenews')
+def politics():
+    return render_template("politics.html")
+
+@app.route('/sample')
+def sample():
+    return render_template("articles/first.html")
+
+# @api_bp.route('/joke')
+# def get_joke():
+#     if len(jokes) == 0:
+#         _init_jokes()
+#     return jsonify(random.choice(jokes))
+
+# @api_bp.route('/jokes')
+# def get_jokes():
+#     if len(jokes) == 0:
+#         _init_jokes()
+#     return jsonify(jokes)
 
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])
@@ -166,3 +182,8 @@ def sup():
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True,port=5000)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
