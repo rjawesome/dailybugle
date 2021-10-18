@@ -2,8 +2,8 @@
 from flask import Flask, render_template, request, Blueprint, jsonify
 from image import image_data
 from pathlib import Path
+from redditapi import getRedditData
 # from api.webapi import api_bp
-
 # create a Flask instance
 app = Flask(__name__)
 
@@ -11,31 +11,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template("index.html")
-
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
-
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
-
-@app.route('/articlea/')
-def article_a():
-    return render_template("ArticleA.html")
-
-@app.route('/articleb/')
-def article_b():
-    return render_template("ArticleB.html")
-
-@app.route('/articlec/')
-def article_c():
-    return render_template("ArticleC.html")
-
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
 
 @app.route('/stub/')
 def stub():
@@ -67,9 +42,12 @@ def unsigned():
 
 @app.route('/rgb/')
 def rgb():
-    print("hello")
     path = Path(app.root_path) / "static" / "img"
     return render_template("rgb.html", images=image_data(path))
+
+@app.route('/postoftheday/')
+def postoftheday():
+    return render_template("postoftheday.html", rdata=getRedditData())
 
 @app.route('/Sophie/')
 def sussy():

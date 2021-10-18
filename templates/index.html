@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="row" style="padding-left: 10%;">
+    <!-- <div class="row" style="padding-left: 10%;">
         {% block links %}
             <div class="col-3">
                 <a href="{{ overview }}" class="btn">Overview</a>
@@ -41,7 +41,7 @@
                 <a href="{{ repo }}" class="btn">Repository</a>
             </div>
         {% endblock %}
-    </div>
+    </div> -->
 
     </div>
 {% endblock %}
@@ -122,6 +122,18 @@
             /* On smaller screens, decrease text size */
             @media only screen and (max-width: 300px) {
                 .text {font-size: 11px}
+            }
+
+            html, body{
+                margin: 0;
+                height: 100%;
+                animation: fadein 2s;
+                -moz-animation: fadein 2s; /* Firefox */
+                -webkit-animation: fadein 2s; /* Safari and Chrome */
+                -o-animation: fadein 2s; /* Opera */
+                background-color: beige;
+                color: black;
+                font-family: "Times New Roman", serif;
             }
         </style>
     </head>
