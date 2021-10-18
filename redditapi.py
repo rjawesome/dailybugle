@@ -26,9 +26,3 @@ def getRedditData():
     redditdata = getReddit()
     (title, url) = getResults(redditdata)
     return (title, url)
-
-if __name__ == "__main__":
-    redditdata = getReddit()
-    print(redditdata)
-    df = getResults(redditdata)
-    print(df)

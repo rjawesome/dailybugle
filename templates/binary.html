@@ -237,65 +237,19 @@
                         <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                     </td>
                     {% endfor %}
-                    <!--
-                    <td><img class="img-responsive py-3" id="bulb0" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt0" onclick="toggleBit('0')">Turn On</button>
-                    </td>
-
-                    <td><img class="img-responsive py-3" id="bulb1" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt1" onclick="toggleBit('1')">Turn On</button>
-                    </td>
-
-                    <td><img class="img-responsive py-3" id="bulb2" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt2" onclick="toggleBit('2')">Turn On</button>
-                    </td>
-
-                    <td><img class="img-responsive py-3" id="bulb3" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt3" onclick="toggleBit('3')">Turn On</button>
-                    </td>
-
-                    <td><img class="img-responsive py-3" id="bulb4" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt4" onclick="toggleBit('4')">Turn On</button>
-                    </td>
-
-                    <td><img class="img-responsive py-3" id="bulb5" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt5" onclick="toggleBit('5')">Turn On</button>
-                    </td>
-
-                    <td><img class="img-responsive py-3" id="bulb6" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt6" onclick="toggleBit('6')">Turn On</button>
-                    </td>
-
-                    <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
-                    </td>
-                    -->
-
                 </tr>
                 <tr>
                     {% for i in range(BITS1) %}
                     <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                     {% endfor %}
-                    <!--
-                    <td><input type='text' id='digit0' Value="0" size="1" readonly></td>
-
-                    <td><input type='text' id='digit1' Value="0" size="1" readonly></td>
-
-                    <td><input type='text' id='digit2' Value="0" size="1" readonly></td>
-
-                    <td><input type='text' id='digit3' Value="0" size="1" readonly></td>
-
-                    <td><input type='text' id='digit4' Value="0" size="1" readonly></td>
-
-                    <td><input type='text' id='digit5' Value="0" size="1" readonly></td>
-
-                    <td><input type='text' id='digit6' Value="0" size="1" readonly></td>
-
-                    <td><input type='text' id='digit7' Value="0" size="1" readonly></td>
-                    -->
                 </tr>
             </table>
         </div>
+        </div>
+    </div>
+    <div class="contact" style="height: 35vh;">
+        <div class="row justify-content-center" style="margin-top: 2%;">
+        <a class="button" href="/thonas">MARVEL</a>
         </div>
     </div>
 {% endblock %}
