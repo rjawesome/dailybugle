@@ -11,6 +11,7 @@
          * [Week 6](#week-6)
       * [Sprint 4](#sprint-4)
          * [Week 7](#week-7)
+         * [Week 8](#week-8)
 <!--te-->
 ## Runtime Link: https://portfolio.nighthawkcodingsociety.com/
 # The People
@@ -29,13 +30,12 @@
 # Theme Idea
 #### We want to make a newspaper based in the fictional Marvel Universe
 #### It will be based on real-life news and fictional news like the Xenonion.  We will each write several brief articles for different sections.  We are currently planning on Global News, Business+Finance, Opinion, and Entertainment.
-#### We will likely need:
-##### 1. To write several ~1-paragraph long articles
-##### 2. 4 different article sections: Breaking News, Entertainment, Opinions, and Politics
-##### 3. Different pages for each section (index.html will be highlights from all sections and the newest articles)
-##### 4. Stacked, floating boxes in columns that are links to articles
-##### 5. A potential scrolling article highlights at the front of the page
-##### 6. Humorous fictional "advertisements"
+#### We currently or are planning on implementing:
+#### 1. A scrolling highlights reel at the front page
+#### 2. 4 different article sections: Breaking News, Entertainment, Opinions, and Politics.  Each section has their own page.
+#### 3. Several funny articles
+#### 4. Humorous fictional "advertisements"
+#### 5. An API of the r/marvel subreddit on the front page
 # Progress Journal
 ## Sprint 2
 ### Week 3
@@ -90,4 +90,12 @@
 | Sophie Park | Sophie has completed both signed and unsigned addition.  She created separate IDs and functions for each row and created a function to add the two numbers. [Signed Addition](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/25), [Unsigned Addition](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/29)|
 | Punarvasu Sangam | Punnu was in charge of doing the Logic Gates portion of this assignment. He has put in 8 logic gates; the Buffer, AND, OR, XOR, NOT, NAND, NOR, and XNOR. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/26) |
 | Ethan Guo | Ethan was assigned to adding the shift buttons and the unicode display onto the binary project.  The shift buttons are working well, they are able to multiply and divide a number by 2 (decimal results round down in the lighbulb display). The problem is the display bar of the binary project will wrongly show .5. Ethan has tried using the floor() function to sove this but was unsuccessful. The unicode also has a slight problem; although unicode is displayed, it is not displayed with ASCII. [Shift](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/28), [Unicode](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/23)|
-| Jason Kaplan | Jason has completed the color code project.  It has a bit toggle and color display for each color in RGB and also shows the combined color below. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/27)|
+| Jason Kaplan | Jason has completed the color code project.  It has a bit toggle and color display for each color in RGB and also shows the combined color below. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/27)|'
+### Week 8
+#### This week we focused on developing the theme of our website:
+| Individual Work | Description |
+| :---- | :---- |
+| Sophie Park | Sophie got the r/marvel api working and re-designed the CSS for the website to be more like a formal newspaper. She is in charge of the politics articles.  [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/1) |
+| Punarvusu Sangam | Punnu planned and made several advertisements.  Punu is in charge of the Entertianment section. [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/2) |
+| Ethan Guo | Ethan worked with Jason to make several article ideas+plan out the structure of the website. Ethan is in charge of the Opinions section.  [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/3) |
+| Jason Kaplan | Jason has gotten a sample slide scroll to work and is waiting for articles to implement them.  Jason is in charge of the Breaking News section. [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/5) |
