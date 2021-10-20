@@ -21,6 +21,28 @@
                         <div>{{image.format}}</div>
                         <div>{{image.size}}</div>
                     </td>
+                    <script>
+                        let grayscale = 0
+                        function FiftyShadesOfGrey() {
+                            if (grayscale === 0 ) {
+                                document.body.style.filter = "grayscale(100%)";
+                                grayscale = 100;
+                            }
+                            else {
+                                document.body.style.filter = "grayscale(0%)";
+                                grayscale = 0;
+                            }
+                        }
+
+                        let rotation = 0;
+                        function rotateImg() {
+                            rotation += 180;
+                            if (rotation === 360) {
+                                rotation = 0;
+                            }
+                            document.body.style.transform = `rotate(${rotation}deg)`;
+                        }
+                    </script>
                     <td>
                         <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
 
