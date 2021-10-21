@@ -108,6 +108,7 @@
             const binary = getBits();
             setConversions(binary);
         }
+
         // add is positive integer, subtract is negative integer
         function add(n) {
             let binary = getBits();
@@ -162,134 +163,112 @@
                 }
             }
         }
-
     </script>
-
-
 </head>
 
 
 <body style="font-family: gilroyLIGHT,serif; color: white;" >
+    <h1 class="text-center">Binary Math with Conversions</h1>
+    <div class="container">
+        <div class="row justify-content-md-center">
 
-<!-- Clock display -->
-<div class="px-3">
-    <span id="clock"></span>
-</div>
-<!-- Navigation bar JavaScript support -->
-<script>
-    // Clock controller
-    let clockElement = document.getElementById('clock');
-    function clock() {
-        let date = new Date();
-        clockElement.textContent = date.toLocaleString();
-    }
-    // Clock refresh frequency
-    setInterval(clock, 1000);
-</script>
+            <div class="col-8">
+                <table class="table", style="color: white">
+                    <tr id="table">
+                        <th>Shift Left (*2)</th>
+                        <th>Plus</th>
+                        <th>Binary</th>
+                        <th>Octal</th>
+                        <th>Hexadecimal</th>
+                        <th>Decimal</th>
+                        <th>ASCII</th>
+                        <!-- Hack: display label for printable character(s)  -->
+                        <th>Minus</th>
+                        <th>Shift Right (/2)</th>
+                    </tr>
+                    <tr>
+                        <td><button class="button" id="shift_left" onclick="shift(1)"><<</button></td>
+                        <td><button class="button" id="add1" onclick="add(1)">+1</button></td>
+                        <td id="binary">00000000</td>
+                        <td id="octal">0</td>
+                        <td id="hexadecimal">0</td>
+                        <td id="decimal">0</td>
+                        <td id="ASCII">0</td>
+                        <!-- Hack: display printable character(s)  -->
+                        <td><button class="button" id="sub1" onclick="add(-1)">-1</button></td>
+                        <td><button class="button" id="shift_right" onclick="shift(-1)">>></button></td>
+                    </tr>
+                </table>
+            </div>
 
-<!-- CONTENT Block, utilize this block for page specific content  -->
+            <div class="col-12">
+                <table class="table">
+                    <tr>
 
-<h1 class="text-center">Binary Math with Conversions</h1>
-<div class="container">
-    <div class="row justify-content-md-center">
+                        <td><img class="img-responsive py-3" id="bulb0" src="/static/assets/shield.png" alt="" width="80" height="Auto">
+                            <button class="button" id="butt0" onclick="toggleBit('0')">Turn On</button>
+                        </td>
 
-        <div class="col-8">
-            <table class="table", style="color: white">
-                <tr id="table">
-                    <th>Shift Left (*2)</th>
-                    <th>Plus</th>
-                    <th>Binary</th>
-                    <th>Octal</th>
-                    <th>Hexadecimal</th>
-                    <th>Decimal</th>
-                    <th>ASCII</th>
-                    <!-- Hack: display label for printable character(s)  -->
-                    <th>Minus</th>
-                    <th>Shift Right (/2)</th>
-                </tr>
-                <tr>
-                    <td><button class="button" id="shift_left" onclick="shift(1)"><<</button></td>
-                    <td><button class="button" id="add1" onclick="add(1)">+1</button></td>
-                    <td id="binary">00000000</td>
-                    <td id="octal">0</td>
-                    <td id="hexadecimal">0</td>
-                    <td id="decimal">0</td>
-                    <td id="ASCII">0</td>
-                    <!-- Hack: display printable character(s)  -->
-                    <td><button class="button" id="sub1" onclick="add(-1)">-1</button></td>
-                    <td><button class="button" id="shift_right" onclick="shift(-1)">>></button></td>
-                </tr>
-            </table>
-        </div>
+                        <td><img class="img-responsive py-3" id="bulb1" src="/static/assets/shield.png" alt="" width="80" height="Auto">
+                            <button class="button" id="butt1" onclick="toggleBit('1')">Turn On</button>
+                        </td>
 
-        <div class="col-12">
-            <table class="table">
-                <tr>
+                        <td><img class="img-responsive py-3" id="bulb2" src="/static/assets/shield.png" alt="" width="80" height="Auto">
+                            <button class="button" id="butt2" onclick="toggleBit('2')">Turn On</button>
+                        </td>
 
-                    <td><img class="img-responsive py-3" id="bulb0" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt0" onclick="toggleBit('0')">Turn On</button>
-                    </td>
+                        <td><img class="img-responsive py-3" id="bulb3" src="/static/assets/shield.png" alt="" width="80" height="Auto">
+                            <button class="button" id="butt3" onclick="toggleBit('3')">Turn On</button>
+                        </td>
 
-                    <td><img class="img-responsive py-3" id="bulb1" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt1" onclick="toggleBit('1')">Turn On</button>
-                    </td>
+                        <td><img class="img-responsive py-3" id="bulb4" src="/static/assets/shield.png" alt="" width="80" height="Auto">
+                            <button class="button" id="butt4" onclick="toggleBit('4')">Turn On</button>
+                        </td>
 
-                    <td><img class="img-responsive py-3" id="bulb2" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt2" onclick="toggleBit('2')">Turn On</button>
-                    </td>
+                        <td><img class="img-responsive py-3" id="bulb5" src="/static/assets/shield.png" alt="" width="80" height="Auto">
+                            <button class="button" id="butt5" onclick="toggleBit('5')">Turn On</button>
+                        </td>
 
-                    <td><img class="img-responsive py-3" id="bulb3" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt3" onclick="toggleBit('3')">Turn On</button>
-                    </td>
+                        <td><img class="img-responsive py-3" id="bulb6" src="/static/assets/shield.png" alt="" width="80" height="Auto">
+                            <button class="button" id="butt6" onclick="toggleBit('6')">Turn On</button>
+                        </td>
 
-                    <td><img class="img-responsive py-3" id="bulb4" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt4" onclick="toggleBit('4')">Turn On</button>
-                    </td>
+                        <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/shield.png" alt="" width="80" height="Auto">
+                            <button class="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
+                        </td>
 
-                    <td><img class="img-responsive py-3" id="bulb5" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt5" onclick="toggleBit('5')">Turn On</button>
-                    </td>
+                    </tr>
+                    <tr>
 
-                    <td><img class="img-responsive py-3" id="bulb6" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt6" onclick="toggleBit('6')">Turn On</button>
-                    </td>
+                        <td><input class='text' id='digit0' Value="0" size="1" readonly></td>
 
-                    <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                        <button class="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
-                    </td>
+                        <td><input class='text' id='digit1' Value="0" size="1" readonly></td>
 
-                </tr>
-                <tr>
+                        <td><input class='text' id='digit2' Value="0" size="1" readonly></td>
 
-                    <td><input class='text' id='digit0' Value="0" size="1" readonly></td>
+                        <td><input class='text' id='digit3' Value="0" size="1" readonly></td>
 
-                    <td><input class='text' id='digit1' Value="0" size="1" readonly></td>
+                        <td><input class='text' id='digit4' Value="0" size="1" readonly></td>
 
-                    <td><input class='text' id='digit2' Value="0" size="1" readonly></td>
+                        <td><input class='text' id='digit5' Value="0" size="1" readonly></td>
 
-                    <td><input class='text' id='digit3' Value="0" size="1" readonly></td>
+                        <td><input class='text' id='digit6' Value="0" size="1" readonly></td>
 
-                    <td><input class='text' id='digit4' Value="0" size="1" readonly></td>
+                        <td><input class='text' id='digit7' Value="0" size="1" readonly></td>
 
-                    <td><input class='text' id='digit5' Value="0" size="1" readonly></td>
-
-                    <td><input class='text' id='digit6' Value="0" size="1" readonly></td>
-
-                    <td><input class='text' id='digit7' Value="0" size="1" readonly></td>
-
-                </tr>
-            </table>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="contact" style="height: 35vh;">
+    <div class="contact" style="height: 35vh;">
 
-    <div class="row justify-content-center" style="margin-top: 2%;">
-        <a class="button" href="/💡💡💡">💡💡💡</a>
+        <div class="row justify-content-center" style="margin-top: 2%;">
+            <a class="button" href="/💡💡💡">💡💡💡</a>
+        </div>
+
     </div>
-
-</div>
 </body>
 
 {% endblock %}

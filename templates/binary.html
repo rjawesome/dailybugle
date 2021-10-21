@@ -24,6 +24,7 @@
             }
             return bits;
         }
+
         // setter for DOM values
         function setConversions(binary) {
             const decimal = parseInt(binary, 2)
@@ -82,8 +83,7 @@
 
         // add is positive integer, subtract is negative integer
         function add(n) {
-            let binary = getBits();
-            // convert to decimal and do math
+            binary = getBits()
             let decimal = parseInt(binary, 2);
             if (n > 0) {  // PLUS
                 decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
@@ -107,14 +107,34 @@
                 }
             }
         }
+
+        function updateHTML() {
+            var elem = document.getElementById('shifterror');
+            if(typeof elem !== 'undefined' && elem !== null) {
+                elem.innerHTML = '';
+            }
+        }
+
         function shift(n) {
-            let binary = getBits();
+            binary = getBits()
             // convert to decimal and do math
             let decimal = parseInt(binary, 2);
             if (n > 0) {  // PLUS
-                decimal = MAX === decimal ? 0 : decimal * 2; // OVERFLOW or PLUS
-            } else  {     // MINUS
-                decimal = 0 === decimal ? MAX : decimal / 2; // OVERFLOW or MINUS
+                if ((decimal*2) < 65535) {
+                    decimal = MAX === decimal ? 0 : decimal * 2; // OVERFLOW or PLUS\
+                    // document.getElementById('shifterror').innerHTML = '';
+                }
+                // else {
+                    // document.getElementById('shifterror').innerHTML = 'shift error, number out of bounds';
+                //}
+            } else {     // MINUS
+                if (decimal%2 == 0) {
+                    decimal = 0 === decimal ? MAX : decimal / 2; // OVERFLOW or MINUS
+               //     document.getElementById('shifterror').innerHTML = '';
+                }
+               // else {
+               //     document.getElementById('shifterror').innerHTML = 'shift error, number out of bounds';
+               // }
             }
             // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
@@ -133,16 +153,15 @@
                 }
             }
         }
-        function set_0(n){
-            let binary = getBits();
+
+        function set_0(n) {
             // convert to decimal and do math
-            let decimal = parseInt(binary, 2);
+            let decimal = parseInt(getBits(), 2);
             if (n > 0) {  // PLUS
                 decimal = MAX === decimal ? 0 : decimal * 0; // OVERFLOW or PLUS
             } else  {     // MINUS
                 decimal = 0 === decimal ? MAX : decimal * 0; // OVERFLOW or MINUS
             }
-
             // convert the result back to binary
             binary= decimal_2_base(decimal, 2);
             // update conversions
@@ -164,71 +183,42 @@
     </script>
 </head>
 
-
 <body>
-<!-- Clock display -->
-<div class="px-3">
-    <span id="clock"></span>
-</div>
-<!-- Dark mode action -->
-<div class="custom-control custom-switch">
-    <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
-    <label class="custom-control-label" for="darkSwitch"></label>
-</div>
-<!-- Navigation bar JavaScript support -->
-<script>
-    // Dark Mode Toggle
-    function darkFunction() {
-        let element = document.body;
-        element.classList.toggle("dark-mode");
-    }
-    // Clock controller
-    let clockElement = document.getElementById('clock');
-    function clock() {
-        let date = new Date();
-        clockElement.textContent = date.toLocaleString();
-    }
-    // Clock refresh frequency
-    setInterval(clock, 1000);
-</script>
-
-<!-- CONTENT Block, utilize this block for page specific content  -->
-
-<h1 class="text-center">Binary Math with Conversions</h1>
-<div class="container">
-    <div class="row justify-content-md-center">
-
-        <div class="col-8">
-            <table class="table">
-                <tr id="table">
-                    <th>Shift Left (*2)</th>
-                    <th>Plus</th>
-                    <th>Binary</th>
-                    <th>Octal</th>
-                    <th>Hexadecimal</th>
-                    <th>Decimal</th>
-                    <th>ASCII</th>
-                    <th>Unicode</th>
-                    <!-- Hack: display label for printable character(s)  -->
-                    <th>Minus</th>
-                    <th>Shift Right (/2)</th>
-                </tr>
-                <tr>
-                    <td><button class="button" id="shift_left" onclick="shift(1)"><<</button></td>
-                    <td><button class="button" id="add1" onclick="add(1)">+1</button></td>
-                    <td id="binary">00000000</td>
-                    <td id="octal">0</td>
-                    <td id="hexadecimal">0</td>
-                    <td id="decimal">0</td>
-                    <td id="ASCII">0</td>
-                    <td id="Unicode">0</td>
-                    <!-- Hack: display printable character(s)  -->
-                    <td><button class="button" id="sub1" onclick="add(-1)">-1</button></td>
-                    <td><button class="button" id="shift_right" onclick="shift(-1)">>></button></td>
-                </tr>
-            </table>
+    <h1 class="text-center">Binary Math with Conversions</h1>
+        <div class="row justify-content-md-center">
+            <div class="col-8">
+                <table class="table">
+                    <tr id="table">
+                        <th>Shift Left (*2)</th>
+                        <th>Plus</th>
+                        <th>Binary</th>
+                        <th>Octal</th>
+                        <th>Hexadecimal</th>
+                        <th>Decimal</th>
+                        <th>ASCII</th>
+                        <th>Unicode</th>
+                        <!-- Hack: display label for printable character(s)  -->
+                        <th>Minus</th>
+                        <th>Shift Right (/2)</th>
+                    </tr>
+                    <!-- <td id="shifterror"></td> -->
+                    <tr>
+                        <td><button class="button" id="shift_left" onclick="shift(1)"><<</button></td>
+                        <td><button class="button" id="add1" onclick="add(1)">+1</button></td>
+                        <td id="binary">00000000</td>
+                        <td id="octal">0</td>
+                        <td id="hexadecimal">0</td>
+                        <td id="decimal">0</td>
+                        <td id="ASCII">0</td>
+                        <td id="Unicode">0</td>
+                        <!-- Hack: display printable character(s)  -->
+                        <td><button class="button" id="sub1" onclick="add(-1)">-1</button></td>
+                        <td><button class="button" id="shift_right" onclick="shift(-1)">>></button></td>
+                    </tr>
+                </table>
+            </div>
         </div>
-
+        <td id="shifterror"></td>
         <div class="col-12">
             <table class="table">
                 <tr>
@@ -252,4 +242,5 @@
         <a class="button" href="/thonas">MARVEL</a>
         </div>
     </div>
+</body>
 {% endblock %}

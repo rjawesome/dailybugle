@@ -69,9 +69,9 @@ def binary():
 def bruh():
     return render_template("thonas.html")
 
-@app.route('/logic_gates')
+@app.route('/logicgates')
 def logic_gates():
-    return render_template("logic_gates.html")
+    return render_template("logicgates.html")
 
 @app.route('/bREAKING-nEWS')
 def breaking():

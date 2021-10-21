@@ -1,146 +1,109 @@
 <!-- Extending the predefined project layout -->
 {% include "layouts/navbar.html" %}
 {% block body %}
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <!-- Use this block for page specific meta data -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Use this block for page specific meta data -->
 
-        <title>Binary page</title>
-        <script>
-            const BITS = '8'; let MAX = parseInt(127, 10); let MIN = parseInt(-128, 10)
-            // return string with current value of each bit
-            function getBits0() {
-                let bits0 = "";
-                for(let i = 0; i < BITS; i++) {
-                    bits0 = bits0 + document.getElementById('digit0' + i).value;
-                }
-                return bits0;
-            }
-
-            function getBits1() {
-                let bits1 = "";
-                for(let i = 0; i < BITS; i++) {
-                    bits1 = bits1 + document.getElementById('digit1' + i).value;
-                }
-                return bits1;
-            }
-
-            // setter for DOM values
-            function setConversions0(binary0) {
-                const decimal0 = parseInt(binary0, 2)
-                // DOM assignment to Decimal conversion
-                document.getElementById('decimal0').innerHTML = decimal0.toString(10)
-            }
-
-            function setConversions1(binary1) {
-                const decimal1 = parseInt(binary1, 2)
-                // DOM assignment to Decimal conversion
-                document.getElementById('decimal1').innerHTML = decimal1.toString(10)
-            }
-
-            function addDecimal() {
-                console.log("addDecimal")
-                result = parseInt(getBits0(), 2)+ parseInt(getBits1(), 2)
-                if (result > 127) {
-                    document.getElementById('result').innerHTML = result.toString() + ", overflow"
-                }
-                else {
-                    document.getElementById('result').innerHTML = result
-                }
-            }
-
-            // toggle selected bit and recalculate
-            function toggleBit0(i) {
-                //alert("Digit action: " + i );
-                const dig0 = document.getElementById('digit0' + i);
-                const image0 = document.getElementById('bulb0' + i);
-                const butt0 = document.getElementById('butt0' + i);
-                // Change digit and visual
-                if (image0.src.match("/static/assets/bulb_on.jpg")) {
-                    dig0.value = 0;
-                    image0.src = "/static/assets/bulb_off.png";
-                    butt0.innerHTML = "Turn On";
-                } else {
-                    dig0.value = 1;
-                    image0.src = "/static/assets/bulb_on.jpg";
-                    butt0.innerHTML = "Turn Off";
-                }
-                // Binary numbers
-                const binary0 = getBits0();
-                setConversions0(binary0);
-                addDecimal();
-            }
-
-            function toggleBit1(i) {
-                //alert("Digit action: " + i );
-                const dig1 = document.getElementById('digit1' + i);
-                const image1 = document.getElementById('bulb1' + i);
-                const butt1 = document.getElementById('butt1' + i);
-                // Change digit and visual
-                if (image1.src.match("/static/assets/bulb_on.jpg")) {
-                    dig1.value = 0;
-                    image1.src = "/static/assets/bulb_off.png";
-                    butt1.innerHTML = "Turn On";
-                } else {
-                    dig1.value = 1;
-                    image1.src = "/static/assets/bulb_on.jpg";
-                    butt1.innerHTML = "Turn Off";
-                }
-                // Binary numbers
-                const binary1 = getBits1();
-                setConversions1(binary1);
-                addDecimal();
-            }
-
-
-            // add is positive integer, subtract is negative integer
-        </script>
-
-
-    </head>
-
-
-    <body>
-
-    <!-- Clock display -->
-    <div class="px-3">
-        <span id="clock"></span>
-    </div>
-    <!-- Dark mode action -->
-    <div class="custom-control custom-switch">
-        <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
-        <label class="custom-control-label" for="darkSwitch"></label>
-    </div>
-    <!-- Navigation bar JavaScript support -->
+    <title>Binary page</title>
     <script>
-        // Dark Mode Toggle
-        function darkFunction() {
-            let element = document.body;
-            element.classList.toggle("dark-mode");
+        const BITS = '8'; let MAX = parseInt(127, 10); let MIN = parseInt(-128, 10)
+        // return string with current value of each bit
+        function getBits0() {
+            let bits0 = "";
+            for(let i = 0; i < BITS; i++) {
+                bits0 = bits0 + document.getElementById('digit0' + i).value;
+            }
+            return bits0;
         }
-        // Clock controller
-        let clockElement = document.getElementById('clock');
-        function clock() {
-            let date = new Date();
-            clockElement.textContent = date.toLocaleString();
+
+        function getBits1() {
+            let bits1 = "";
+            for(let i = 0; i < BITS; i++) {
+                bits1 = bits1 + document.getElementById('digit1' + i).value;
+            }
+            return bits1;
         }
-        // Clock refresh frequency
-        setInterval(clock, 1000);
+
+        // setter for DOM values
+        function setConversions0(binary0) {
+            const decimal0 = parseInt(binary0, 2)
+            // DOM assignment to Decimal conversion
+            document.getElementById('decimal0').innerHTML = decimal0.toString(10)
+        }
+
+        function setConversions1(binary1) {
+            const decimal1 = parseInt(binary1, 2)
+            // DOM assignment to Decimal conversion
+            document.getElementById('decimal1').innerHTML = decimal1.toString(10)
+        }
+
+        function addDecimal() {
+            console.log("addDecimal")
+            result = parseInt(getBits0(), 2)+ parseInt(getBits1(), 2)
+            if (result > 127) {
+                document.getElementById('result').innerHTML = result.toString() + ", overflow"
+            }
+            else {
+                document.getElementById('result').innerHTML = result
+            }
+        }
+
+        // toggle selected bit and recalculate
+        function toggleBit0(i) {
+            //alert("Digit action: " + i );
+            const dig0 = document.getElementById('digit0' + i);
+            const image0 = document.getElementById('bulb0' + i);
+            const butt0 = document.getElementById('butt0' + i);
+            // Change digit and visual
+            if (image0.src.match("/static/assets/bulb_on.jpg")) {
+                dig0.value = 0;
+                image0.src = "/static/assets/bulb_off.png";
+                butt0.innerHTML = "Turn On";
+            } else {
+                dig0.value = 1;
+                image0.src = "/static/assets/bulb_on.jpg";
+                butt0.innerHTML = "Turn Off";
+            }
+            // Binary numbers
+            const binary0 = getBits0();
+            setConversions0(binary0);
+            addDecimal();
+        }
+
+        function toggleBit1(i) {
+            //alert("Digit action: " + i );
+            const dig1 = document.getElementById('digit1' + i);
+            const image1 = document.getElementById('bulb1' + i);
+            const butt1 = document.getElementById('butt1' + i);
+            // Change digit and visual
+            if (image1.src.match("/static/assets/bulb_on.jpg")) {
+                dig1.value = 0;
+                image1.src = "/static/assets/bulb_off.png";
+                butt1.innerHTML = "Turn On";
+            } else {
+                dig1.value = 1;
+                image1.src = "/static/assets/bulb_on.jpg";
+                butt1.innerHTML = "Turn Off";
+            }
+            // Binary numbers
+            const binary1 = getBits1();
+            setConversions1(binary1);
+            addDecimal();
+        }
     </script>
+</head>
 
-    <!-- CONTENT Block, utilize this block for page specific content -->
-
+<body>
     <h1 class="text-center">Unsigned Addition</h1>
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-12">
                 <table class="table">
                     <tr>
-                        <!--  <td id="binary">00000000</td> -->
-
                         <td id="decimal0">0</td>
 
                         <td><img class="img-responsive py-3" id="bulb00" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
@@ -200,8 +163,6 @@
 
                 <table class="table">
                     <tr>
-                        <!-- <td id="banary">00000000</td> -->
-
                         <td id="decimal1">0</td>
 
                         <td><img class="img-responsive py-3" id="bulb10" src="/static/assets/bulb_off.png" alt="" width="80" height="Auto">
