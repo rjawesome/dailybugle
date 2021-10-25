@@ -106,6 +106,6 @@
 | Name | Video Ticket |
 | :---- | :---- |
 | Sophie Park | [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/8) |
-| Punarvusu Sangam | [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/9) |
+| Punarvasu Sangam | [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/9) |
 | Ethan Guo | [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/10) |
 | Jason Kaplan | [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/11) |
