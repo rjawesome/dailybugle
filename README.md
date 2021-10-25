@@ -105,7 +105,7 @@
 ### Week 9
 | Name | Video Ticket |
 | :---- | :---- |
-| Sophie Park | [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/8) |
-| Punarvasu Sangam | [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/9) |
-| Ethan Guo | [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/10) |
-| Jason Kaplan | [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/11) |
+| Sophie Park | Average Score: 6/6, [Issue with Video](https://github.com/CalrethilOfMirkwood/dailybugle/issues/8) |
+| Punarvasu Sangam | Average Score: 5.58/6, [Issue with Video](https://github.com/CalrethilOfMirkwood/dailybugle/issues/9) |
+| Ethan Guo | Average Score: 5.92/6, [Issue with Video](https://github.com/CalrethilOfMirkwood/dailybugle/issues/10) |
+| Jason Kaplan | Average Score: 6/6, [Issue with Video](https://github.com/CalrethilOfMirkwood/dailybugle/issues/11) |

@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- Use this block for page specific meta data -->
 
-    <title>Binary page</title>
+    <title>Unsigned Addition</title>
     <script>
         const BITS = '8'; let MAX = parseInt(127, 10); let MIN = parseInt(-128, 10)
         // return string with current value of each bit
@@ -42,7 +42,6 @@
         }
 
         function addDecimal() {
-            console.log("addDecimal")
             result = parseInt(getBits0(), 2)+ parseInt(getBits1(), 2)
             if (result > 127) {
                 document.getElementById('result').innerHTML = result.toString() + ", overflow"
