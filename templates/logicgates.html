@@ -8,9 +8,12 @@
         <meta charset="UTF-8">
         <title>Logic Gates</title>
         <script>
-            function logicGates() {
+            function logicGates() 
+            {
+                // check input boxes
                 input1 = document.getElementById("input1").checked;
                 input2 = document.getElementById("input2").checked;
+                // do logic ops
                 outputBUFFER = input1
                 outputAND = input1 && input2;
                 outputOR = input1 || input2;
@@ -19,7 +22,8 @@
                 outputNAND = !(input1 && input2);
                 outputNOR = !(input1 || input2);
                 outputXNOR = !((input1 && !input2) || (!input1 && input2));
-
+                
+                // assign output to text var/id
                 document.getElementById("outputBUFFER_text").value = outputBUFFER;
                 document.getElementById("outputAND_text").value = outputAND;
                 document.getElementById("outputOR_text").value = outputOR;
@@ -38,16 +42,18 @@
                 <p>For the inputs, an unchecked box = 0, and a checked box = 1.</p>
 
                 <p> Note: For gates that only have one input, Input A will be used.</p>
-
+                
+                <!-- checkbox inputs -->
                 <input type="checkbox" id="input1" name="input1" value="Input A" />
                 <label for="input1">A</label>
                 <br>
                 <input type="checkbox" id="input2" name="input2" value="Input B" />
                 <label for="input2">B</label>
                 <br>
+                <!-- submit button -->
                 <input class="button" type="button" onclick="logicGates()" value="Submit">
             </div>
-
+            <!-- table org: gate, output -->
             <table class="table">
                 <tr>
                     <th>Gate</th>
