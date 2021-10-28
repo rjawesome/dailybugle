@@ -1,5 +1,5 @@
 # import "packages" from flask
-from flask import Flask, render_template, request, Blueprint, jsonify
+from flask import Flask, render_template, request
 from image import image_data
 from pathlib import Path
 from redditapi import getRedditData
@@ -93,18 +93,6 @@ def politics():
 def sample():
     return render_template("articles/first.html")
 
-# @api_bp.route('/joke')
-# def get_joke():
-#     if len(jokes) == 0:
-#         _init_jokes()
-#     return jsonify(random.choice(jokes))
-
-# @api_bp.route('/jokes')
-# def get_jokes():
-#     if len(jokes) == 0:
-#         _init_jokes()
-#     return jsonify(jokes)
-
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])
 def greet():
@@ -162,6 +150,6 @@ if __name__ == "__main__":
     app.run(debug=True,port=5000)
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found():
     # note that we set the 404 status explicitly
-    return render_template('404.html'), 404
+    return render_template('404.html')

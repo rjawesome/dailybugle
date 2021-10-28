@@ -1,14 +1,10 @@
 <!-- Extending the predefined project layout -->
 {% include "layouts/navbar.html" %}
-{% block body %}
+{% set BITS1 = 16 %}
+{% set MAX1 = ((2 ** BITS1) - 1) %}
+{% set msgTurnOn = "Turn On" %}
+{% set imgBulbOff = "/static/assets/shield.png" %}
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-
-    <!-- Common style for site -->
     <style>
         html, body{
             margin: 0;
@@ -40,12 +36,9 @@
             font-size: 16px;
         }
     </style>
-
-    <!-- Use this block for page specific meta data -->
-
-    <title>Thonas</title>
+    <title>Binary page</title>
     <script>
-        const BITS = '8'; let max = '255'; let MAX = parseInt(max, 10);
+        const BITS = {{BITS1}}; let max = '255'; let MAX = {{MAX1}}; <!-- parseInt(max, 10); -->
         // return string with current value of each bit
         function getBits() {
             let bits = "";
@@ -54,6 +47,7 @@
             }
             return bits;
         }
+
         // setter for DOM values
         function setConversions(binary) {
             const decimal = parseInt(binary, 2)
@@ -64,9 +58,10 @@
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = decimal.toString(10)
-            <!-- Hack: derive printable character(s) for each 8 bits -->
+            // Hack derive printable character(s) for each 8 bits -->
             // document.getElementById('ASCII').innerHTML = parseInt(binary, 2).toString(10);
             document.getElementById('ASCII').innerHTML = String.fromCharCode(decimal)
+            document.getElementById('Unicode').innerHTML = String.fromCodePoint(decimal)
 
         }
 
@@ -95,13 +90,13 @@
             const image = document.getElementById('bulb' + i);
             const butt = document.getElementById('butt' + i);
             // Change digit and visual
-            if (image.src.match("/static/assets/hydra.png")) {
+            if (image.src.match("/static/assets/hydra.jpg")) {
                 dig.value = 0;
                 image.src = "/static/assets/shield.png";
                 butt.innerHTML = "Turn On";
             } else {
                 dig.value = 1;
-                image.src = "/static/assets/hydra.png";
+                image.src = "/static/assets/hydra.jpg";
                 butt.innerHTML = "Turn Off";
             }
             // Binary numbers
@@ -111,12 +106,11 @@
 
         // add is positive integer, subtract is negative integer
         function add(n) {
-            let binary = getBits();
-            // convert to decimal and do math
+            binary = getBits()
             let decimal = parseInt(binary, 2);
             if (n > 0) {  // PLUS
                 decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
-            } else {     // MINUS
+            } else  {     // MINUS
                 decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
             }
             // convert the result back to binary
@@ -128,23 +122,42 @@
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit' + i).value = digit;
                 if (digit === "1") {
-                    document.getElementById('bulb' + i).src = "/static/assets/hydra.png";
+                    document.getElementById('bulb' + i).src = "/static/assets/shield.png";
                     document.getElementById('butt' + i).innerHTML = "Turn Off";
                 } else {
-                    document.getElementById('bulb' + i).src = "/static/assets/shield.png";
+                    document.getElementById('bulb' + i).src = "/static/assets/hydra.png";
                     document.getElementById('butt' + i).innerHTML = "Turn On";
                 }
             }
         }
 
+        function updateHTML() {
+            var elem = document.getElementById('shifterror');
+            if(typeof elem !== 'undefined' && elem !== null) {
+                elem.innerHTML = '';
+            }
+        }
+
         function shift(n) {
-            let binary = getBits();
+            binary = getBits()
             // convert to decimal and do math
             let decimal = parseInt(binary, 2);
             if (n > 0) {  // PLUS
-                decimal = MAX === decimal ? 0 : decimal * 2; // OVERFLOW or PLUS
+                if ((decimal*2) < 65535) {
+                    decimal = MAX === decimal ? 0 : decimal * 2; // OVERFLOW or PLUS\
+                    // document.getElementById('shifterror').innerHTML = '';
+                }
+                // else {
+                // document.getElementById('shifterror').innerHTML = 'shift error, number out of bounds';
+                //}
             } else {     // MINUS
-                decimal = 0 === decimal ? MAX : decimal / 2; // OVERFLOW or MINUS
+                if (decimal%2 == 0) {
+                    decimal = 0 === decimal ? MAX : decimal / 2; // OVERFLOW or MINUS
+                    //     document.getElementById('shifterror').innerHTML = '';
+                }
+                // else {
+                //     document.getElementById('shifterror').innerHTML = 'shift error, number out of bounds';
+                // }
             }
             // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
@@ -155,120 +168,99 @@
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit' + i).value = digit;
                 if (digit === "1") {
-                    document.getElementById('bulb' + i).src = "/static/assets/hydra.png";
+                    document.getElementById('bulb' + i).src = "/static/assets/shield.png";
                     document.getElementById('butt' + i).innerHTML = "Turn Off";
                 } else {
-                    document.getElementById('bulb' + i).src = "/static/assets/shield.png";
+                    document.getElementById('bulb' + i).src = "/static/assets/hydra.png";
                     document.getElementById('butt' + i).innerHTML = "Turn On";
                 }
             }
         }
+
+        function set_0(n) {
+            // convert to decimal and do math
+            let decimal = parseInt(getBits(), 2);
+            if (n > 0) {  // PLUS
+                decimal = MAX === decimal ? 0 : decimal * 0; // OVERFLOW or PLUS
+            } else  {     // MINUS
+                decimal = 0 === decimal ? MAX : decimal * 0; // OVERFLOW or MINUS
+            }
+            // convert the result back to binary
+            binary= decimal_2_base(decimal, 2);
+            // update conversions
+            setConversions(binary);
+            // update bits
+            for (let i = 0; i < binary.length; i++) {
+                let digit = binary.substr(i, 1);
+                document.getElementById('digit' + i).value = digit;
+                if (digit === "1") {
+                    document.getElementById('bulb' + i).src = "/static/assets/hydra.jpg";
+                    document.getElementById('butt' + i).innerHTML = "Turn Off";
+                } else {
+                    document.getElementById('bulb' + i).src = "/static/assets/hydra.png";
+                    document.getElementById('butt' + i).innerHTML = "Turn On";
+                }
+            }
+        }
+
     </script>
 </head>
 
-
-<body style="font-family: gilroyLIGHT,serif; color: white;" >
+<body>
     <h1 class="text-center">Binary Math with Conversions</h1>
-    <div class="container">
-        <div class="row justify-content-md-center">
-
-            <div class="col-8">
-                <table class="table", style="color: white">
-                    <tr id="table">
-                        <th>Shift Left (*2)</th>
-                        <th>Plus</th>
-                        <th>Binary</th>
-                        <th>Octal</th>
-                        <th>Hexadecimal</th>
-                        <th>Decimal</th>
-                        <th>ASCII</th>
-                        <!-- Hack: display label for printable character(s)  -->
-                        <th>Minus</th>
-                        <th>Shift Right (/2)</th>
-                    </tr>
-                    <tr>
-                        <td><button class="button" id="shift_left" onclick="shift(1)"><<</button></td>
-                        <td><button class="button" id="add1" onclick="add(1)">+1</button></td>
-                        <td id="binary">00000000</td>
-                        <td id="octal">0</td>
-                        <td id="hexadecimal">0</td>
-                        <td id="decimal">0</td>
-                        <td id="ASCII">0</td>
-                        <!-- Hack: display printable character(s)  -->
-                        <td><button class="button" id="sub1" onclick="add(-1)">-1</button></td>
-                        <td><button class="button" id="shift_right" onclick="shift(-1)">>></button></td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="col-12">
-                <table class="table">
-                    <tr>
-
-                        <td><img class="img-responsive py-3" id="bulb0" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                            <button class="button" id="butt0" onclick="toggleBit('0')">Turn On</button>
-                        </td>
-
-                        <td><img class="img-responsive py-3" id="bulb1" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                            <button class="button" id="butt1" onclick="toggleBit('1')">Turn On</button>
-                        </td>
-
-                        <td><img class="img-responsive py-3" id="bulb2" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                            <button class="button" id="butt2" onclick="toggleBit('2')">Turn On</button>
-                        </td>
-
-                        <td><img class="img-responsive py-3" id="bulb3" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                            <button class="button" id="butt3" onclick="toggleBit('3')">Turn On</button>
-                        </td>
-
-                        <td><img class="img-responsive py-3" id="bulb4" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                            <button class="button" id="butt4" onclick="toggleBit('4')">Turn On</button>
-                        </td>
-
-                        <td><img class="img-responsive py-3" id="bulb5" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                            <button class="button" id="butt5" onclick="toggleBit('5')">Turn On</button>
-                        </td>
-
-                        <td><img class="img-responsive py-3" id="bulb6" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                            <button class="button" id="butt6" onclick="toggleBit('6')">Turn On</button>
-                        </td>
-
-                        <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/shield.png" alt="" width="80" height="Auto">
-                            <button class="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
-                        </td>
-
-                    </tr>
-                    <tr>
-
-                        <td><input class='text' id='digit0' Value="0" size="1" readonly></td>
-
-                        <td><input class='text' id='digit1' Value="0" size="1" readonly></td>
-
-                        <td><input class='text' id='digit2' Value="0" size="1" readonly></td>
-
-                        <td><input class='text' id='digit3' Value="0" size="1" readonly></td>
-
-                        <td><input class='text' id='digit4' Value="0" size="1" readonly></td>
-
-                        <td><input class='text' id='digit5' Value="0" size="1" readonly></td>
-
-                        <td><input class='text' id='digit6' Value="0" size="1" readonly></td>
-
-                        <td><input class='text' id='digit7' Value="0" size="1" readonly></td>
-
-                    </tr>
-                </table>
-            </div>
+    <div class="row justify-content-md-center">
+        <div class="col-8">
+            <table class="table" style="color: white">
+                <tr id="table">
+                    <th>Shift Left (*2)</th>
+                    <th>Plus</th>
+                    <th>Binary</th>
+                    <th>Octal</th>
+                    <th>Hexadecimal</th>
+                    <th>Decimal</th>
+                    <th>ASCII</th>
+                    <th>Unicode</th>
+                    <!-- Hack: display label for printable character(s)  -->
+                    <th>Minus</th>
+                    <th>Shift Right (/2)</th>
+                </tr>
+                <!-- <td id="shifterror"></td> -->
+                <tr>
+                    <td><button class="button" id="shift_left" onclick="shift(1)"><<</button></td>
+                    <td><button class="button" id="add1" onclick="add(1)">+1</button></td>
+                    <td id="binary">00000000</td>
+                    <td id="octal">0</td>
+                    <td id="hexadecimal">0</td>
+                    <td id="decimal">0</td>
+                    <td id="ASCII">0</td>
+                    <td id="Unicode">0</td>
+                    <!-- Hack: display printable character(s)  -->
+                    <td><button class="button" id="sub1" onclick="add(-1)">-1</button></td>
+                    <td><button class="button" id="shift_right" onclick="shift(-1)">>></button></td>
+                </tr>
+            </table>
         </div>
     </div>
-
+    <td id="shifterror"></td>
+    <div class="col-12">
+        <table class="table">
+            <tr>
+                {% for i in range(BITS1) %}
+                    <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                        <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                    </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for i in range(BITS1) %}
+                    <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
     <div class="contact" style="height: 35vh;">
-
         <div class="row justify-content-center" style="margin-top: 2%;">
             <a class="button" href="/💡💡💡">💡💡💡</a>
         </div>
-
     </div>
 </body>
-
-{% endblock %}
