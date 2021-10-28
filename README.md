@@ -12,6 +12,8 @@
       * [Sprint 4](#sprint-4)
          * [Week 7](#week-7)
          * [Week 8](#week-8)
+       * [Sprint 5](#sprint-5)
+         * [Week 9](#week-9)
 <!--te-->
 ## Runtime Link: https://portfolio.nighthawkcodingsociety.com/
 # The People
@@ -99,3 +101,11 @@
 | Punarvusu Sangam | Punnu planned and made several advertisements.  Punu is in charge of the Entertianment section. [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/2) |
 | Ethan Guo | Ethan worked with Jason to make several article ideas+plan out the structure of the website. Ethan is in charge of the Opinions section.  [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/3) |
 | Jason Kaplan | Jason has gotten a sample slide scroll to work and is waiting for articles to implement them.  Jason is in charge of the Breaking News section. [Issue](https://github.com/CalrethilOfMirkwood/dailybugle/issues/5) |
+## Sprint 5
+### Week 9
+| Name | Video Ticket |
+| :---- | :---- |
+| Sophie Park | Average Score: 6/6, [Issue with Video](https://github.com/CalrethilOfMirkwood/dailybugle/issues/8) |
+| Punarvasu Sangam | Average Score: 5.58/6, [Issue with Video](https://github.com/CalrethilOfMirkwood/dailybugle/issues/9) |
+| Ethan Guo | Average Score: 5.92/6, [Issue with Video](https://github.com/CalrethilOfMirkwood/dailybugle/issues/10) |
+| Jason Kaplan | Average Score: 6/6, [Issue with Video](https://github.com/CalrethilOfMirkwood/dailybugle/issues/11) |
