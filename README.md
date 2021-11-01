@@ -94,6 +94,7 @@
 | Ethan Guo | Ethan was assigned to adding the shift buttons and the unicode display onto the binary project.  The shift buttons are working well, they are able to multiply and divide a number by 2 (decimal results round down in the lighbulb display). The problem is the display bar of the binary project will wrongly show .5. Ethan has tried using the floor() function to sove this but was unsuccessful. The unicode also has a slight problem; although unicode is displayed, it is not displayed with ASCII. [Shift](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/28), [Unicode](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/23)|
 | Jason Kaplan | Jason has completed the color code project.  It has a bit toggle and color display for each color in RGB and also shows the combined color below. [Issue](https://github.com/CalrethilOfMirkwood/flask_portfolio/issues/27)|'
 ### Week 8
+#### Presentation: https://docs.google.com/presentation/d/1JG4A49rjuy_OdHUFUUD5KexqLFunRMukSFKCJgQxfSo/edit?usp=sharing
 #### This week we focused on developing the theme of our website:
 | Individual Work | Description |
 | :---- | :---- |
