@@ -89,9 +89,9 @@ def entertainment():
 def politics():
     return render_template("politics.html")
 
-@app.route('/sample')
+@app.route('/template')
 def sample():
-    return render_template("articles/first.html")
+    return render_template("articles/template.html")
 
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])

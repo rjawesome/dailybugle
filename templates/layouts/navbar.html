@@ -16,9 +16,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <style>
-    html, body{
+    body {
         margin: 0;
-        height: 100%;
         animation: fadein 2s;
         -moz-animation: fadein 2s; /* Firefox */
         -webkit-animation: fadein 2s; /* Safari and Chrome */
@@ -28,7 +27,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         font-family: "Times New Roman", serif;
     }
 
-    h1{
+    h1 {
         font-size: 5em;
         text-align: center;
     }
@@ -46,6 +45,28 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
+    }
+
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .side {
+        -ms-flex: 30%;
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+
+    .main {
+        -ms-flex: 70%;
+        flex: 70%;
+        padding: 20px;
     }
 </style>
 
