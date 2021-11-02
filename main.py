@@ -106,7 +106,7 @@ def article_search():
 
 @app.route('/sample')
 def sample():
-    return render_template("articles/first.html")
+    return render_template("articles/template.html")
 
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])

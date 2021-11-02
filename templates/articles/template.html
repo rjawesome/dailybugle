@@ -1,0 +1,22 @@
+<!-- Extending the predefined project layout -->
+{% include "layouts/navbar.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Sample Article" %}
+
+<div class="row">
+        <div class="side">
+                <h2>About The Author</h2>
+                <h5>Photo of Author:</h5>
+                <img style="height:70%;">
+                <p>Author Bio</p>
+                <p>Sponsored Advertisement</p>
+                <!-- <img>ad goes here</img> I will try to create a function that chooses a random ad every time -->
+        </div>
+        <div class="main">
+                <h2>Title of Article</h2>
+                <h5>Title Description, Date</h5>
+                <img style="width:70%;">
+                <p>Article Text</p>
+        </div>
+</div>
