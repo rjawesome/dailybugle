@@ -1,0 +1,19 @@
+<div class="col-12">
+    <p>Hello, {{search_word}}!</p>
+</div>
+<div class="col-12">
+    <form action="/articles/aaa" id="greet" method="POST" >
+        <label for="name">Type a greeting name?</label>
+        <input name="name" id="name">
+        <input type="submit" value="Greetings!">
+    </form>
+</div>
+<body>
+<h1 class="text-center">Post of the Day</h1>
+<br>><br>
+<div class="container">
+    <p>I am so smart. </p>
+    <h2 style="font-style: italic">{{rdata[0]}}</h2>
+    <img src="{{rdata[1]}}" width="100%">
+</div>
+</body>

@@ -89,6 +89,21 @@ def entertainment():
 def politics():
     return render_template("politics.html")
 
+@app.route('/articles')
+def articles():
+    return render_template("articles.html")
+
+@app.route('/articles/aaa', methods=['GET', 'POST'])
+def article_search():
+    if request.form:
+        search_word = request.form.get("name")
+        if len(search_word) != 0:  # input field has content
+            return render_template("articles.html", name=search_word)
+    file = open("requirements.txt", "r")
+    unsigned(file.read())
+    # starting and empty input default
+    return render_template("articles.html", name="World")
+
 @app.route('/sample')
 def sample():
     return render_template("articles/first.html")
