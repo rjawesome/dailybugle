@@ -104,10 +104,6 @@ def article_search():
     # starting and empty input default
     return render_template("articles.html", name="World")
 
-@app.route('/sample')
-def sample():
-    return render_template("articles/template.html")
-
 # greetings project for Ethan Guo
 @app.route('/Ethan/greet', methods=['GET', 'POST'])
 def greet():
@@ -159,6 +155,36 @@ def sup():
     # starting and empty input default
     return render_template("sus.html", name="World")
 
+#######################################################################################
+# articles go here at the bottom so we can find them more easily
+#######################################################################################
+@app.route('/template')
+def template():
+    return render_template("articles/template.html")
+
+@app.route('/posadastime')
+def posdadastime():
+    return render_template("articles/aliensrule.html")
+
+@app.route('/deadpooldeadfool')
+def deadpooldeadfool():
+    return render_template("articles/deadpoolmurder.html")
+
+@app.route('/ThonasIsBarney!!:shock-face::hot-face::fire::flustered:')
+def thonasbarney():
+    return render_template("articles/thonasbarney.html")
+
+@app.route('/superprivileged')
+def superprivileged():
+    return render_template("articles/superprivileged.html")
+
+@app.route('/hyahyahya')
+def heroresponse():
+    return render_template("articles/heroresponse.html")
+
+@app.route('/spidermanbad')
+def spidermanbad():
+    return render_template("articles/spidermanbad.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
